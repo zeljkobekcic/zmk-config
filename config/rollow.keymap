@@ -170,7 +170,7 @@
                                 &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       &none         &none         &none          &none          &none
                                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL       &kp RSHFT     &kp RCTRL      &kp RALT       &kp RGUI   
                                 &kp Z           &kp X           &kp C           &kp V           &kp B           &none         &kp SPACE     &kp TAB        &none          &kp K_APP
-                                                                &none           &kp BSPC        &kp ENT         &none         &trans        &none
+                                                                &none           &kp BSPC        &kp ENTER       &none         &trans        &none
                         >;
         
                             sensor-bindings = <&inc_dec_kp DEL BPSC &inc_dec_kp RIGHT LEFT>;
