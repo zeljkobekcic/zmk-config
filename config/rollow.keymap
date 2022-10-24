@@ -8,49 +8,115 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define COL   0
-#define COLL  1
-#define COLR  2
+// Layer Definitions out toggle
+#define QWERTY  0
+#define NUMBER  1
+#define NAVI    2
+#define FUNC    3
+#define ADJUST  4
+
+// key alias definitions
+#define ___x___ &none
+#define _______ &trans
+
+//Layer Taps
+//#define NAV_TAB &lt     NAVI    TAB
+//#define NUM_BSP &lt     NUMBER  BSPC
+//#define FUN_Z   &lt     FUNC    Z
+//#define AD_FSLH &lt     ADJUST  FSLH
+
+//GACS Home Row Mods QWERTY
+#define LGUI_A  &mt     LGUI    A
+#define LALT_S  &mt     LALT    S
+#define LCTRL_D &mt     LCTRL   D
+#define LSHFT_F &mt     LSHFT   F
+
+#define RSHFT_J &mt     RSHFT   J
+#define RCTRL_K &mt     RCTRL   K
+#define RALT_L  &mt     RALT    L
+#define RGUI_QT &mt     RGUI    SQT
+
+//Shortcuts
+#define S_UNDO  &kp LC(Z)
+#define S_CUT   &kp LC(X)
+#define S_COPY  &kp LC(C)
+#define S_PASTE &kp LC(V)
+#define S_REDO  &kp LC(Y)
+
+//Shortening Their codes to seven char
+#define PAUBRK  &kp PAUSE_BREAK
+#define BT1     &bt BT_SEL_0
+#define BT2     &bt BT_SEL_1
+#define BT3     &bt BT_SEL_2
+#define BT4     &bt BT_SEL_3
+#define BT5     &bt BT_SEL_4
+
+//Behavior Configuration
+#define TAPPING_TERM 200
+
+&lt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <TAPPING_TERM>;
+};
+
+&mt {
+    flavor = "tap-preferred";
+    tapping-term-ms = <TAPPING_TERM>;
+};
 
 / {
+        chosen {
+                zmk,kscan = &kscan0;
+		zmk,matrix_transform = &five_column_transform;
+	};
+
         behaviors {
-        tp: tap_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TAP_MODS";
-            #binding-cells = <2>;
-            tapping_term_ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+                TD_LBKT: tap_dance_left_bracket {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "tap_dance_left_bracket";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <TAPPING_TERM>;
+                    bindings = <&kp LPAR>, <&kp LBKT>, <&kp LS(LBKT)>;
                 };
-         };
+        
+                TD_RBKT: tap_dance_right_bracket {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "tap_dance_right_bracket";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <TAPPING_TERM>;
+                    bindings = <&kp RPAR>, <&kp RBKT>, <&kp LS(RBKT)>;
+                };
+        };
 
 
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-/* Default
- * .-----------------------------------------.                    .-----------------------------------------.
- * | TAB  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  | BKSP |
- * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | CTRL |   A  |   S  |   D  |   F  |   G  |                    |   H  |   J  |   K  |   L  |   ;  |   '  |
- * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | SHFT |   Z  |   X  |   C  |   V  |   B  |-------.    .-------|   N  |   M  |   ,  |   .  |   /  | SHFT |
- * '-----------------------------------------/       /     \      \-----------------------------------------'
- *                          |  GUI |  LWR | / Space /       \ Space\  |TT(RS)| Tab  |
- *                          |      |      |/       /         \      \ |      |      |
- *                          '-------------''------'           '------''-------------'
- *
- *   Encoder Left: Up <-> Down
- *   Encoder Right: Left <-> Right
- */
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
 
+                /*
+                *test
+                *   ,----------------------------------.    ,----------------------------------.
+                *   |   Q  |   W  |   E  |   R  |   T  |    |   Y  |   U  |   I  |   O  |   P  |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   |   A  |   S  |   D  |   F  |   G  |    |   H  |   J  |   K  |   L  |   '  |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   |   Z  |   X  |   C  |   V  |   B  |    |   N  |   M  |   ,  |   .  |   /  |
+                *   `------+------+------+------+------+    +------+------+------+------+------'
+                *                 |      |NUMBSP| Shft |    | Spc  |NAVTAB| mute |
+                *                 `------+------+------'    `------+------+------'
+                *
+                *   Encoder Left: Up <-> Down
+                *   Encoder Right: Left <-> Right
+                */
+
+                        bindings = <
+                                &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P   
+                                &mt LGUI A      &mt LALT S      &mt LCTRL D     &mt LSHFT F     &kp G           &kp H           &mt RSHFT J     &mt RCTRL K     &mt RALT L      &mt RGUI SQT
+                                &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH
+                                                                &kp LGUI        &lt NUMBER BSPC &kp LSHFT       &kp SPACE       &lt NAVI TAB    &kp RALT
+                        >;
+                
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
                 };
 
