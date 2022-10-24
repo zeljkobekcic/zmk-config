@@ -120,7 +120,35 @@
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
                 };
 
-                lower_layer {
+                number_layer {
+
+                /*
+                *
+                *   ,----------------------------------.    ,----------------------------------.
+                *   | Esc  | Ent  | Tab  | Bksp |   `  |    | tLBKT|   7  |   8  |   9  | tRBKT|
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   | GUI  | Alt  | Ctrl | Shft |   .  |    |   ;  |   4  |   5  |   6  |   =  |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   | Undo | Cut  | Copy | Pste | Redo |    |   -  |   1  |   2  |   3  |   \  |
+                *   `------+------+------+------+------+    +------+------+------+------+------'
+                *                 |      |LyrTap|      |    | Spc  |   0  | mute |
+                *                 `------+------+------'    `------+------+------'
+                *
+                *   Encoder Left: Up <-> Down
+                *   Encoder Right: Left <-> Right
+                */
+
+                        bindings = <
+                                &kp ESC         &none           &none           &none           &kp GRAVE       &none           &kp N7          &kp N8          &kp N9          &none
+                                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SEMI        &kp N4          &kp N5          &kp N6          &kp EQUAL   
+                                S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          &kp MINUS       &kp N1          &kp N2          &kp N3          &kp BSLH
+                                                                &none           &trans          &none           &kp SPACE       &kp N0          &kp C_MUTE
+                        >;
+
+                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
+                };
+
+                /*lower_layer {
 /* LOWER
  * .-----------------------------------------.                    .-----------------------------------------.
  * |  ESC |   1  |  2   |  3   |  4   |  5   |                    |   6  |   7  |   8  |   9  |   0  | BKSP |
@@ -135,7 +163,7 @@
  * 
  *   Encoder Left: PG_UP <-> PG_DN
  *   Encoder Right: -
- */
+ *
                         bindings = <
    &kp ESC    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5            &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
@@ -145,6 +173,7 @@
 
                             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
                 };
+                */
 
                 raise_layer {
 /* RAISE
