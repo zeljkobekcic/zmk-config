@@ -167,11 +167,11 @@
                 */
 
                         bindings = <
-                                &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       &none         &none         &none          &none          &none
-                                &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL       &kp RSHFT     &kp RCTRL      &kp RALT       &kp RGUI
-                                &kp Z           &kp X           &kp C           &kp V           &kp B           &none         &kp SPACE     &kp TAB        &none          &kp K_APP
-                                                                &none           &kp BSPC        &kp ENTER       &none         &trans        &kp C_MUTE
-                        >;
+                                &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       &none           &none           &none           &none           &none
+                                &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL         &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
+                                &kp Z           &kp X           &kp C           &kp V           &kp B           &none           &kp SPACE       &kp TAB         &none           &kp K_APP
+                                                                &none           &kp BSPC        &kp ENTER       &none           &trans          &kp C_MUTE
+                            >;
 
                         sensor-bindings = <&inc_dec_kp DEL BSPC &inc_dec_kp RIGHT LEFT>;
                 };
@@ -195,13 +195,41 @@
                 */
 
                         bindings = <
-                                &kp ESC         &none           &none           &none           &none           &kp PSCRN       &kp F7      &kp F8      &kp F9      &kp F12
-                                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SLCK        &kp F4      &kp F5      &kp F6      &kp F11
-                                &trans          &none           &none           &none           &none           &kp PAUSE_BREAK &kp F1      &kp F2      &kp F3      &kp F10
-                                                                &none           &none           &none           &none           &none       &kp C_MUTE
+                                &kp ESC         &none           &none           &none           &none           &kp PSCRN       &kp F7          &kp F8          &kp F9          &kp F12
+                                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SLCK        &kp F4          &kp F5          &kp F6          &kp F11
+                                &trans          &none           &none           &none           &none           &kp PAUSE_BREAK &kp F1          &kp F2          &kp F3          &kp F10
+                                                                &none           &none           &none           &none           &none           &kp C_MUTE
                         >;
 
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
+                };
+
+                adjust_layer {
+
+                /*
+                *
+                *   ,----------------------------------.    ,----------------------------------.
+                *   | Reset| boot |      |      |BT Clr|    |      |      |      | boot |Reset |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   | BT5  | BT4  | BT3  | BT2  | BT1  |    |      |      |      |      |      |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   |      |      |      |      |OutTog|    |      |      |      |      |LyrTap|
+                *   `------+------+------+------+------+    +------+------+------+------+------'
+                *                 |      |      |      |    |      |      |      |
+                *                 `------+------+------'    `------+------+------'
+                *
+                *   Encoder Left: Up <-> Down
+                *   Encoder Right: Left <-> Right
+                */
+
+                        bindings = <
+                                &reset          &bootloader     &none           &none           &bt BT_CLR      &none           &none           &none           &bootloader     &reset
+                                BT5             BT4             BT3             BT2             BT1             &none           &none           &none           &none           &none
+                                &none           &none           &none           &none           &out OUT_TOG    &none           &none           &none           &none           &trans
+                                                                &none           &none           &none           &none           &none           &none
+                        >;
+
+                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
                 };
 
         };
