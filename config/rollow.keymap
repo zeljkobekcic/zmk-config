@@ -148,7 +148,7 @@
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
                 };
 
-                nav_layer {
+                /*nav_layer {
 
                 /*
                 *
@@ -164,7 +164,7 @@
                 *
                 *   Encoder Left: Up <-> Down
                 *   Encoder Right: Left <-> Right
-                */
+                
         
                         bindings = <
                                 &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       &none         &none         &none          &none          &none
@@ -174,7 +174,7 @@
                         >;
 
                         sensor-bindings = <&inc_dec_kp DEL BPSC &inc_dec_kp RIGHT LEFT>;
-                };
+                };*/
 
                 function_layer {
 
