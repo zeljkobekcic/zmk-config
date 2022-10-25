@@ -173,7 +173,7 @@
                                                                 &none           &kp BSPC        &kp ENTER       &none         &trans        &kp C_MUTE
                         >;
 
-                        sensor-bindings = <&inc_dec_kp DEL BPSC &inc_dec_kp RIGHT LEFT>;
+                        sensor-bindings = <&inc_dec_kp DEL BSPC &inc_dec_kp RIGHT LEFT>;
                 };
 
                 function_layer {
