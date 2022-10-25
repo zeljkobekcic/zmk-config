@@ -17,7 +17,7 @@ My Notes:
 - Uses [infused-kim](https://github.com/infused-kim) repo to enable peripheral side encoder
 - Used [tutuuXY](https://github.com/TutuuXY/zmk-config)'s repo to get shield definition
 - My [Issues](https://github.com/T4CORUN/zmk-config/issues)
-- Things I use that are missing
+- Things I use that are missing in ZMK
 
 	```text
 	Mouse Emulation
