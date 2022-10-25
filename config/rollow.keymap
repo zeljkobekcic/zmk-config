@@ -111,7 +111,7 @@
                 */
 
                         bindings = <
-                                &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P   
+                                &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P
                                 &mt LGUI A      &mt LALT S      &mt LCTRL D     &mt LSHFT F     &kp G           &kp H           &mt RSHFT J     &mt RCTRL K     &mt RALT L      &mt RGUI SQT
                                 &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH
                                                                 &kp LGUI        &lt NUMBER BSPC &kp LSHFT       &kp SPACE       &lt NAVI TAB    &kp RALT
@@ -140,7 +140,7 @@
 
                         bindings = <
                                 &kp ESC         &none           &none           &none           &kp GRAVE       &none           &kp N7          &kp N8          &kp N9          &none
-                                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SEMI        &kp N4          &kp N5          &kp N6          &kp EQUAL   
+                                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SEMI        &kp N4          &kp N5          &kp N6          &kp EQUAL
                                 &kp Z           &kp X           &kp C           &kp V           &kp B           &kp MINUS       &kp N1          &kp N2          &kp N3          &kp BSLH
                                                                 &none           &trans          &none           &kp SPACE       &kp N0          &kp C_MUTE
                         >;
@@ -149,7 +149,7 @@
                 };
 
                 nav_layer {
-                
+
                 /*
                 *
                 *   ,----------------------------------.    ,----------------------------------.
@@ -168,7 +168,7 @@
         
                         bindings = <
                                 &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       &none         &none         &none          &none          &none
-                                &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL       &kp RSHFT     &kp RCTRL      &kp RALT       &kp RGUI   
+                                &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL       &kp RSHFT     &kp RCTRL      &kp RALT       &kp RGUI
                                 &kp Z           &kp X           &kp C           &kp V           &kp B           &none         &kp SPACE     &kp TAB        &none          &kp K_APP
                                                                 &none           &kp BSPC        &kp ENTER       &none         &trans        &kp C_MUTE
                         >;
