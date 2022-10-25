@@ -16,6 +16,7 @@ My Notes:
 - ZMK does not officially define the Rollow Shield and does not support Peripheral Side Encoder as of 2022-Oct-25
 - Uses [infused-kim](https://github.com/infused-kim) repo to enable peripheral side encoder
 - Used [tutuuXY](https://github.com/TutuuXY/zmk-config)'s repo to get shield definition
+- My [Issues](https://github.com/T4CORUN/zmk-config/issues)
 - Things I use that are missing
 
 	```text
