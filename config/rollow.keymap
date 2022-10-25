@@ -172,8 +172,37 @@
                                 &kp Z           &kp X           &kp C           &kp V           &kp B           &none         &kp SPACE     &kp TAB        &none          &kp K_APP
                                                                 &none           &kp BSPC        &kp ENTER       &none         &trans        &kp C_MUTE
                         >;
-        
+
                         sensor-bindings = <&inc_dec_kp DEL BPSC &inc_dec_kp RIGHT LEFT>;
                 };
+
+                function_layer {
+
+                /*
+                *
+                *   ,----------------------------------.    ,----------------------------------.
+                *   | Esc  | Ent  | Tab  | Bksp |   `  |    |PrtScr|  F7  |  F8  |  F9  | F12  |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   | GUI  | Alt  | Ctrl | Shft |   .  |    |ScrLck|  F4  |  F5  |  F6  | F11  |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   |LyrTap|      |      |      |      |    |PauBrk|  F1  |  F2  |  F3  | F10  |
+                *   `------+------+------+------+------+    +------+------+------+------+------'
+                *                 |      |      |      |    |      |      | mute |
+                *                 `------+------+------'    `------+------+------'
+                *
+                *   Encoder Left: Up <-> Down
+                *   Encoder Right: Left <-> Right
+                */
+
+                        bindings = <
+                                &kp ESC         &kp ENT         &kp TAB         &kp BSPC        &kp GRAVE       &kp PSCRN       &kp F7      &kp F8      &kp F9      &kp F12
+                                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SEMI        &kp F4      &kp F5      &kp F6      &kp F11
+                                &trans          &none           &none           &none           &none           &kp PAUBRK      &kp F1      &kp F2      &kp F3      &kp F10
+                                                                &none           &none           &none           &none           &none       &kp C_MUTE
+                        >;
+
+                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
+                };
+
         };
 };
