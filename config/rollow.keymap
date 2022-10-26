@@ -16,15 +16,15 @@
 #define FUNC    3
 #define ADJUST  4
 
-// key alias definitions
-#define ___x___ &none
-#define _______ &trans
+//Basic Key Aliases
+#define ___________     &trans
+#define _____x_____     &none
 
 //Layer Taps
-//#define NAV_TAB &lt     NAVI    TAB
-//#define NUM_BSP &lt     NUMBER  BSPC
-//#define FUN_Z   &lt     FUNC    Z
-//#define AD_FSLH &lt     ADJUST  FSLH
+#define NAV_TAB &lt     NAVI    TAB
+#define NUM_BSP &lt     NUMBER  BSPC
+#define FUN_Z   &lt     FUNC    Z
+#define AD_FSLH &lt     ADJUST  FSLH
 
 //GACS Home Row Mods QWERTY
 #define LGUI_A  &mt     LGUI    A
@@ -44,13 +44,13 @@
 #define S_PASTE &kp LC(V)
 #define S_REDO  &kp LC(Y)
 
-//Shortening Their codes to seven char
-#define PAUBRK  &kp PAUSE_BREAK
-#define BT1     &bt BT_SEL_0
-#define BT2     &bt BT_SEL_1
-#define BT3     &bt BT_SEL_2
-#define BT4     &bt BT_SEL_3
-#define BT5     &bt BT_SEL_4
+//Bluetooth
+#define BTClear &bt BT_CLR
+#define BT1     &bt BT_SEL 0
+#define BT2     &bt BT_SEL 1
+#define BT3     &bt BT_SEL 2
+#define BT4     &bt BT_SEL 3
+#define BT5     &bt BT_SEL 4
 
 //Behavior Configuration
 #define TAPPING_TERM 200
@@ -113,9 +113,9 @@
 
                         bindings = <
                                 &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P
-                                &mt LGUI A      &mt LALT S      &mt LCTRL D     &mt LSHFT F     &kp G           &kp H           &mt RSHFT J     &mt RCTRL K     &mt RALT L      &mt RGUI SQT
-                                &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp FSLH
-                                                                &kp LGUI        &lt NUMBER BSPC &kp LSHFT       &kp SPACE       &lt NAVI TAB    &kp RALT
+                                LGUI_A          LALT_S          LCTRL_D         LSHFT_F         &kp G           &kp H           RSHFT_J         RCTRL_K         RALT_L          RGUI_QT
+                                FUN_Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         AD_FSLH
+                                                                _____x_____     NUM_BSP         &kp LSHFT       &kp SPACE       NAV_TAB         &kp C_MUTE
                         >;
                 
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
@@ -140,10 +140,10 @@
                 */
 
                         bindings = <
-                                &kp ESC         &none           &none           &none           &kp GRAVE       &none           &kp N7          &kp N8          &kp N9          &none
+                                &kp ESC         _____x_____     _____x_____     _____x_____     &kp GRAVE       _____x_____     &kp N7          &kp N8          &kp N9          _____x_____
                                 &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SEMI        &kp N4          &kp N5          &kp N6          &kp EQUAL
-                                &kp Z           &kp X           &kp C           &kp V           &kp B           &kp MINUS       &kp N1          &kp N2          &kp N3          &kp BSLH
-                                                                &none           &trans          &none           &kp SPACE       &kp N0          &kp C_MUTE
+                                S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          &kp MINUS       &kp N1          &kp N2          &kp N3          &kp BSLH
+                                                                _____x_____     ___________     _____x_____     &kp SPACE       &kp N0          &kp C_MUTE
                         >;
 
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
@@ -168,10 +168,10 @@
                 */
 
                         bindings = <
-                                &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       &none           &none           &none           &none           &none
+                                &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
                                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL         &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
-                                &kp Z           &kp X           &kp C           &kp V           &kp B           &none           &kp SPACE       &kp TAB         &none           &kp K_APP
-                                                                &none           &kp BSPC        &kp ENTER       &none           &trans          &kp C_MUTE
+                                S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          _____x_____     &kp SPACE       &kp TAB         _____x_____     kp K_APP
+                                                                _____x_____     &kp BSPC        &kp ENTER       _____x_____     ___________     &kp C_MUTE
                             >;
 
                         sensor-bindings = <&inc_dec_kp DEL BSPC &inc_dec_kp RIGHT LEFT>;
@@ -196,10 +196,10 @@
                 */
 
                         bindings = <
-                                &kp ESC         &none           &none           &none           &none           &kp PSCRN       &kp F7          &kp F8          &kp F9          &kp F12
+                                &kp ESC         _____x_____     _____x_____     _____x_____     _____x_____     &kp PSCRN       &kp F7          &kp F8          &kp F9          &kp F12
                                 &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SLCK        &kp F4          &kp F5          &kp F6          &kp F11
-                                &trans          &none           &none           &none           &none           &kp PAUSE_BREAK &kp F1          &kp F2          &kp F3          &kp F10
-                                                                &none           &none           &none           &none           &none           &kp C_MUTE
+                                ___________     _____x_____     _____x_____     _____x_____     _____x_____     &kp PAUSE_BREAK &kp F1          &kp F2          &kp F3          &kp F10
+                                                                _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     &kp C_MUTE
                         >;
 
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -224,10 +224,10 @@
                 */
 
                         bindings = <
-                                &reset          &bootloader     &none           &none           &bt BT_CLR      &none           &none           &none           &bootloader     &reset
-                                &bt BT_SEL 5    &bt BT_SEL 4    &bt BT_SEL 3    &bt BT_SEL 2    &bt BT_SEL 1    &none           &none           &none           &none           &none
-                                &none           &none           &none           &none           &out OUT_TOG    &none           &none           &none           &none           &trans
-                                                                &none           &none           &none           &none           &none           &none
+                                &reset          &bootloader     _____x_____     _____x_____     BTClear         _____x_____     _____x_____     _____x_____     &bootloader     &reset
+                                BT5             BT4             BT3             BT2             BT1             _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
+                                _____x_____     _____x_____     _____x_____     _____x_____     &out OUT_TOG    _____x_____     _____x_____     _____x_____     _____x_____     ___________
+                                                                _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
                         >;
 
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
