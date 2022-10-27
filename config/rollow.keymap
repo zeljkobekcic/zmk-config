@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#include <T4CORUN/definitions.dtsi>
+#include "../T4CORUN/definitions.dtsi"
 
 //Behavior Configuration
 #define TAPPING_TERM 200
@@ -142,7 +142,7 @@
                 *   ,----------------------------------.    ,----------------------------------.
                 *   | Esc  |      |      |      |      |    |PrtScr|  F7  |  F8  |  F9  | F12  |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   | GUI  | Alt  | Ctrl | Shft |   .  |    |ScrLck|  F4  |  F5  |  F6  | F11  |
+                *   | GUI  | Alt  | Ctrl | Shft |      |    |ScrLck|  F4  |  F5  |  F6  | F11  |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
                 *   |LyrTap|      |      |      |      |    |PauBrk|  F1  |  F2  |  F3  | F10  |
                 *   `------+------+------+------+------+    +------+------+------+------+------'
