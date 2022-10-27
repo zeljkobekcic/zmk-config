@@ -1,0 +1,59 @@
+// Layer Definitions out toggle
+#define QWERTY  0
+#define COLEMAK 5
+#define NUMBER  1
+#define NAVI    2
+#define FUNC    3
+#define ADJUST  4
+
+//Basic Key Aliases
+#define ___________     &trans
+#define _____x_____     &none
+
+//Layer Taps
+#define NAV_TAB &lt     NAVI    TAB
+#define NUM_BSP &lt     NUMBER  BSPC
+#define FUN_Z   &lt     FUNC    Z
+#define AD_FSLH &lt     ADJUST  FSLH
+
+//To Layer
+#define DEFAULT &to     QWERTY
+#define COLMKDH &to     COLEMAK
+
+//GACS Home Row Mods QWERTY
+#define LGUI_A  &mt     LGUI    A
+#define LALT_S  &mt     LALT    S
+#define LCTRL_D &mt     LCTRL   D
+#define LSHFT_F &mt     LSHFT   F
+
+#define RSHFT_J &mt     RSHFT   J
+#define RCTRL_K &mt     RCTRL   K
+#define RALT_L  &mt     RALT    L
+#define RGUI_QT &mt     RGUI    SQT
+
+//GACS Home Row Mods COLEMAKDH
+#define LGUI_A  &mt     LGUI    A
+#define LALT_R  &mt     LALT    R
+#define LCTRL_S &mt     LCTRL   S
+#define LSHFT_T &mt     LSHFT   T
+
+#define RSHFT_N &mt     RSHFT   N
+#define RCTRL_E &mt     RCTRL   E
+#define RALT_I  &mt     RALT    I
+#define RGUI_O	&mt     RGUI    O
+
+
+//Shortcuts
+#define S_UNDO  &kp LC(Z)
+#define S_CUT   &kp LC(X)
+#define S_COPY  &kp LC(C)
+#define S_PASTE &kp LC(V)
+#define S_REDO  &kp LC(Y)
+
+//Bluetooth
+#define BTClear &bt BT_CLR
+#define BT0     &bt BT_SEL 0
+#define BT1     &bt BT_SEL 1
+#define BT2     &bt BT_SEL 2
+#define BT3     &bt BT_SEL 3
+#define BT4     &bt BT_SEL 4

@@ -9,48 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-// Layer Definitions out toggle
-#define QWERTY  0
-#define NUMBER  1
-#define NAVI    2
-#define FUNC    3
-#define ADJUST  4
-
-//Basic Key Aliases
-#define ___________     &trans
-#define _____x_____     &none
-
-//Layer Taps
-#define NAV_TAB &lt     NAVI    TAB
-#define NUM_BSP &lt     NUMBER  BSPC
-#define FUN_Z   &lt     FUNC    Z
-#define AD_FSLH &lt     ADJUST  FSLH
-
-//GACS Home Row Mods QWERTY
-#define LGUI_A  &mt     LGUI    A
-#define LALT_S  &mt     LALT    S
-#define LCTRL_D &mt     LCTRL   D
-#define LSHFT_F &mt     LSHFT   F
-
-#define RSHFT_J &mt     RSHFT   J
-#define RCTRL_K &mt     RCTRL   K
-#define RALT_L  &mt     RALT    L
-#define RGUI_QT &mt     RGUI    SQT
-
-//Shortcuts
-#define S_UNDO  &kp LC(Z)
-#define S_CUT   &kp LC(X)
-#define S_COPY  &kp LC(C)
-#define S_PASTE &kp LC(V)
-#define S_REDO  &kp LC(Y)
-
-//Bluetooth
-#define BTClear &bt BT_CLR
-#define BT0     &bt BT_SEL 0
-#define BT1     &bt BT_SEL 1
-#define BT2     &bt BT_SEL 2
-#define BT3     &bt BT_SEL 3
-#define BT4     &bt BT_SEL 4
+#include <T4CORUN/definitions.dtsi>
 
 //Behavior Configuration
 #define TAPPING_TERM 200
@@ -95,7 +54,7 @@
                 default_layer {
 
                 /*
-                *test
+                *
                 *   ,----------------------------------.    ,----------------------------------.
                 *   |   Q  |   W  |   E  |   R  |   T  |    |   Y  |   U  |   I  |   O  |   P  |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
@@ -209,7 +168,7 @@
                 /*
                 *
                 *   ,----------------------------------.    ,----------------------------------.
-                *   |      |      |      |OutTog|BT Clr|    |      |      |      |      |      |
+                *   |      |      |      |OutTog|BT Clr|    |QWERTY|CLMKDH|      |      |      |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
                 *   | BT4  | BT3  | BT2  | BT1  | BT0  |    |      |      |      |      |      |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
@@ -223,12 +182,40 @@
                 */
 
                         bindings = <
-                                _____x_____     _____x_____     _____x_____     &out OUT_TOG    BTClear         _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
+                                _____x_____     _____x_____     _____x_____     &out OUT_TOG    BTClear         DEFAULT         COLMKDH         _____x_____     _____x_____     _____x_____
                                 BT4             BT3             BT2             BT1             BT0             _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
                                 _____x_____     _____x_____     _____x_____     &bootloader     &reset          &reset          &bootloader     _____x_____     _____x_____     ___________
                                                                 _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
                         >;
 
+                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
+                };
+
+                colemakdh_layer {
+
+                /*
+                *
+                *   ,----------------------------------.    ,----------------------------------.
+                *   |   Q  |   W  |   F  |   P  |   B  |    |   J  |   L  |   U  |   Y  |   '  |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   |   A  |   R  |   S  |   T  |   G  |    |   M  |   N  |   E  |   I  |   O  |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   |   Z  |   X  |   C  |   D  |   V  |    |   K  |   H  |   ,  |   .  |   /  |
+                *   `------+------+------+------+------+    +------+------+------+------+------'
+                *                 |      |NUMBSP| Shft |    | Spc  |NAVTAB| mute |
+                *                 `------+------+------'    `------+------+------'
+                *
+                *   Encoder Left: Up <-> Down
+                *   Encoder Right: Left <-> Right
+                */
+
+                        bindings = <
+                                &kp Q           &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &kp SQT
+                                LGUI_A          LALT_R          LCTRL_S         LSHFT_T         &kp G           &kp M           RSHFT_N         RCTRL_E         RALT_I          RGUI_O
+                                FUN_Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         AD_FSLH
+                                                                _____x_____     NUM_BSP         &kp LSHFT       &kp SPACE       NAV_TAB         &kp C_MUTE
+                        >;
+                
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
                 };
 
