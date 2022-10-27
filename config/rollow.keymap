@@ -48,11 +48,11 @@
 
 //Bluetooth
 #define BTClear &bt BT_CLR
-#define BT1     &bt BT_SEL 0
-#define BT2     &bt BT_SEL 1
-#define BT3     &bt BT_SEL 2
-#define BT4     &bt BT_SEL 3
-#define BT5     &bt BT_SEL 4
+#define BT0     &bt BT_SEL 0
+#define BT1     &bt BT_SEL 1
+#define BT2     &bt BT_SEL 2
+#define BT3     &bt BT_SEL 3
+#define BT4     &bt BT_SEL 4
 
 //Behavior Configuration
 #define TAPPING_TERM 200
@@ -127,7 +127,7 @@
                 /*
                 *
                 *   ,----------------------------------.    ,----------------------------------.
-                *   | Esc  |      |      |      |   `  |    | tLBKT|   7  |   8  |   9  | tRBKT|
+                *   | Esc  |      |      |   ~  |   `  |    | tLBKT|   7  |   8  |   9  | tRBKT|
                 *   +------+------+------+------+------|    +------+------+------+------+------+
                 *   | GUI  | Alt  | Ctrl | Shft |   .  |    |   ;  |   4  |   5  |   6  |   =  |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
@@ -141,7 +141,7 @@
                 */
 
                         bindings = <
-                                &kp ESC         _____x_____     _____x_____     _____x_____     &kp GRAVE       &TD_LBKT        &kp N7          &kp N8          &kp N9          &TD_RBKT
+                                &kp ESC         _____x_____     _____x_____     &kp TILDE       &kp GRAVE       &TD_LBKT        &kp N7          &kp N8          &kp N9          &TD_RBKT
                                 &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SEMI        &kp N4          &kp N5          &kp N6          &kp EQUAL
                                 S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          &kp MINUS       &kp N1          &kp N2          &kp N3          &kp BSLH
                                                                 _____x_____     ___________     _____x_____     &kp SPACE       &kp N0          &kp C_MUTE
@@ -169,7 +169,7 @@
                 */
 
                         bindings = <
-                                &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
+                                &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       _____x_____     _____x_____     _____x_____     _____x_____     &kp ESC
                                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL         &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
                                 S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          _____x_____     &kp SPACE       &kp TAB         _____x_____     &kp K_APP
                                                                 _____x_____     &kp BSPC        &kp ENTER       _____x_____     ___________     &kp C_MUTE
@@ -198,7 +198,7 @@
 
                         bindings = <
                                 &kp ESC         _____x_____     _____x_____     _____x_____     _____x_____     &kp PSCRN       &kp F7          &kp F8          &kp F9          &kp F12
-                                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SLCK        &kp F4          &kp F5          &kp F6          &kp F11
+                                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       _____x_____     &kp SLCK        &kp F4          &kp F5          &kp F6          &kp F11
                                 ___________     _____x_____     _____x_____     _____x_____     _____x_____     &kp PAUSE_BREAK &kp F1          &kp F2          &kp F3          &kp F10
                                                                 _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     &kp C_MUTE
                         >;
@@ -213,7 +213,7 @@
                 *   ,----------------------------------.    ,----------------------------------.
                 *   |LyrTap|      |      |OutTog|BT Clr|    |      |      |      |      |LyrTap|
                 *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   | BT5  | BT4  | BT3  | BT2  | BT1  |    |      |      |      |      |      |
+                *   | BT4  | BT3  | BT2  | BT1  | BT0  |    |      |      |      |      |      |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
                 *   |      |      |      | boot |reset |    |reset |boot  |      |      |LyrTap|
                 *   `------+------+------+------+------+    +------+------+------+------+------'
@@ -226,7 +226,7 @@
 
                         bindings = <
                                 ___________     _____x_____     _____x_____     &out OUT_TOG    BTClear         _____x_____     _____x_____     _____x_____     _____x_____     ___________
-                                BT5             BT4             BT3             BT2             BT1             _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
+                                BT4             BT3             BT2             BT1             BT0             _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
                                 _____x_____     _____x_____     _____x_____     &bootloader     &reset          &reset          &bootloader     _____x_____     _____x_____     ___________
                                                                 _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
                         >;
