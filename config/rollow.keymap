@@ -68,10 +68,10 @@
 };
 
 / {
-        chosen {
-                zmk,kscan = &kscan0;
-		zmk,matrix_transform = &five_column_transform;
-	};
+        //chosen {
+        //        zmk,kscan = &kscan0;
+	//	zmk,matrix_transform = &five_column_transform;
+	//};
 
         behaviors {
                 TD_LBKT: tap_dance_left_bracket {
