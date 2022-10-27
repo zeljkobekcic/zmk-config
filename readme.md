@@ -14,6 +14,7 @@ My Notes:
 
 - This is my first time using ZMK
 - ZMK does not officially define the Rollow Shield and does not support Peripheral Side Encoder as of 2022-Oct-25
+- Keymap is heavily inspired by Manna Harbor Miryoku. I flipped some things around and made some operations doable with the left side so I can keep using the mouse
 - Uses [infused-kim](https://github.com/infused-kim) repo to enable peripheral side encoder
 - Used [tutuuXY](https://github.com/TutuuXY/zmk-config)'s repo to get shield definition
 - My [Issues](https://github.com/T4CORUN/zmk-config/issues)
