@@ -60,3 +60,5 @@
 
 //Behavior Configuration
 #define TAPPING_TERM 200
+#define TAPPING_TERM_GUIALT 230
+#define TAPPING_TERM_PINKY 250
