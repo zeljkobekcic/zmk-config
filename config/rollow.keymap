@@ -9,10 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#include "../T4CORUN/definitions.dtsi"
-
-//Behavior Configuration
-#define TAPPING_TERM 200
+#include "../T4CORUN/config.dtsi"
+#include "../T4CORUN/tapdances.dtsi"
 
 &lt {
     flavor = "tap-preferred";
@@ -30,21 +28,6 @@
 	};
 
         behaviors {
-                TD_LBKT: tap_dance_left_bracket {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "tap_dance_left_bracket";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <TAPPING_TERM>;
-                    bindings = <&kp LPAR>, <&kp LBKT>, <&kp LS(LBKT)>;
-                };
-        
-                TD_RBKT: tap_dance_right_bracket {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "tap_dance_right_bracket";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <TAPPING_TERM>;
-                    bindings = <&kp RPAR>, <&kp RBKT>, <&kp LS(RBKT)>;
-                };
         };
 
 

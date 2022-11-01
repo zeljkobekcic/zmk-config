@@ -1,0 +1,48 @@
+/ {
+    behaviors {
+		//QWERTY_COLEMAK
+        hm_gui: homerow_gui {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_GUI";
+        #binding-cells = <2>;
+        tapping-term-ms = <TAPPING_TERM>+<30>;
+        quick-tap-ms = <0>;
+        flavor = "tap-preferred";
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+        };
+
+        hm_alt: homerow_alt {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_alt";
+        #binding-cells = <2>;
+        tapping-term-ms = <TAPPING_TERM>+<30>;
+        quick-tap-ms = <0>;
+        flavor = "tap-preferred";
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+        };
+
+        hm_ctl: homerow_ctrl {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_CTRL";
+        #binding-cells = <2>;
+        tapping-term-ms = <TAPPING_TERM>;
+        quick-tap-ms = <0>;
+        flavor = "tap-preferred";
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+        };
+
+        hm_sft: homerow_shift {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_SHIFT";
+        #binding-cells = <2>;
+        tapping-term-ms = <TAPPING_TERM>;
+        quick-tap-ms = <0>;
+        flavor = "tap-preferred";
+        global-quick-tap;
+        bindings = <&kp>, <&kp>;
+        };
+    };
+};
