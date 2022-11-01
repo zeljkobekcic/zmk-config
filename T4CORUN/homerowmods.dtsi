@@ -51,7 +51,6 @@
         tapping-term-ms = <TAPPING_TERM_PINKY>;
         quick-tap-ms = <0>;
         flavor = "tap-preferred";
-        global-quick-tap;
         bindings = <&kp>, <&kp>;
         };
     };
