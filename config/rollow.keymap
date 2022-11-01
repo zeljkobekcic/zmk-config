@@ -11,6 +11,7 @@
 
 #include "../T4CORUN/config.dtsi"
 #include "../T4CORUN/tapdances.dtsi"
+#include "../T4CORUN/homerowmods.dtsi"
 
 &lt {
     flavor = "tap-preferred";
