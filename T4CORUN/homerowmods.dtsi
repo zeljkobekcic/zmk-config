@@ -4,7 +4,7 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_GUI";
         #binding-cells = <2>;
-        tapping-term-ms = <230>;
+        tapping-term-ms = <TAPPING_TERM_GUIALT>;
         quick-tap-ms = <0>;
         flavor = "tap-preferred";
         global-quick-tap;
@@ -15,7 +15,7 @@
         compatible = "zmk,behavior-hold-tap";
         label = "HOMEROW_ALT";
         #binding-cells = <2>;
-        tapping-term-ms = <230>;
+        tapping-term-ms = <TAPPING_TERM_GUIALT>;
         quick-tap-ms = <0>;
         flavor = "tap-preferred";
         global-quick-tap;
@@ -48,7 +48,7 @@
         compatible = "zmk,behavior-hold-tap";
         label = "LAYERTAP_PINKY";
         #binding-cells = <2>;
-        tapping-term-ms = <TAPPING_TERM+50>;
+        tapping-term-ms = <TAPPING_TERM_PINKY>;
         quick-tap-ms = <0>;
         flavor = "tap-preferred";
         global-quick-tap;
