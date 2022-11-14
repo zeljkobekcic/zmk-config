@@ -116,7 +116,7 @@
                                                                 CLSETAB         &kp BSPC        &kp ENTER       _____x_____     ___________     _____x_____
                             >;
 
-                        sensor-bindings = <&inc_dec_kp NEXTTAB PREVTAB &inc_dec_kp RIGHT LEFT>;
+                        sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp RIGHT LEFT>;
                 };
 
                 function_layer {
