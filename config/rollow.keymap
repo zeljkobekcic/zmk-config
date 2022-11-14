@@ -88,7 +88,7 @@
                                                                 _____x_____     ___________     _____x_____     &kp SPACE       &kp N0          &kp C_MUTE
                         >;
 
-                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp DEL BSPC>;
+                        sensor-bindings = <&inc_dec_kp &none &none &inc_dec_kp DEL BSPC>;
                 };
 
                 nav_layer {
@@ -116,7 +116,7 @@
                                                                 CLSETAB         &kp BSPC        &kp ENTER       _____x_____     ___________     _____x_____
                             >;
 
-                        sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp RIGHT LEFT>;
+                        sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp &none &none>;
                 };
 
                 function_layer {
