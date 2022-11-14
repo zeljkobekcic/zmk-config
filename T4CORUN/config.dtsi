@@ -50,6 +50,10 @@
 #define S_PASTE &kp LC(V)
 #define S_REDO  &kp LC(Y)
 
+#define CLSETAB &kp LC(W)
+#define NEXTTAB &kp LC(TAB)
+#define PREVTAB &kp LC(LS(TAB))
+
 //Bluetooth
 #define BTClear &bt BT_CLR
 #define BT0     &bt BT_SEL 0

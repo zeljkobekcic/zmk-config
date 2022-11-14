@@ -77,8 +77,8 @@
                 *                 |      |LyrTap|      |    | Spc  |   0  | mute |
                 *                 `------+------+------'    `------+------+------'
                 *
-                *   Encoder Left: Up <-> Down
-                *   Encoder Right: Left <-> Right
+                *   Encoder Left: x <-> x
+                *   Encoder Right: Backspace <-> Del
                 */
 
                         bindings = <
@@ -88,7 +88,7 @@
                                                                 _____x_____     ___________     _____x_____     &kp SPACE       &kp N0          &kp C_MUTE
                         >;
 
-                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
+                        sensor-bindings = <&inc_dec_kp _____x_____ _____x_____ &inc_dec_kp DEL BSPC>;
                 };
 
                 nav_layer {
@@ -102,21 +102,21 @@
                 *   +------+------+------+------+------|    +------+------+------+------+------+
                 *   | Undo | Cut  | Copy | Pste | Redo |    |      | Spc  | Tab  |      | App  |
                 *   `------+------+------+------+------+    +------+------+------+------+------'
-                *                 |      | Bpsc | Ent  |    |      |LyrTap|      |
+                *                 | close| Bpsc | Ent  |    |      |LyrTap|      |
                 *                 `------+------+------'    `------+------+------'
                 *
-                *   Encoder Left: Up <-> Down
-                *   Encoder Right: Left <-> Right
+                *   Encoder Left: Previous Browser Tab <-> Next Browser Tab
+                *   Encoder Right: x <-> x
                 */
 
                         bindings = <
                                 &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       &kp INS         _____x_____     _____x_____     _____x_____     _____x_____
                                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL         &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
                                 S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          _____x_____     &kp SPACE       &kp TAB         _____x_____     &kp K_APP
-                                                                _____x_____     &kp BSPC        &kp ENTER       _____x_____     ___________     &kp C_MUTE
+                                                                CLSETAB         &kp BSPC        &kp ENTER       _____x_____     ___________     _____x_____
                             >;
 
-                        sensor-bindings = <&inc_dec_kp DEL BSPC &inc_dec_kp RIGHT LEFT>;
+                        sensor-bindings = <&inc_dec_kp NEXTTAB PREVTAB &inc_dec_kp _____x_____ _____x_____>;
                 };
 
                 function_layer {
@@ -130,21 +130,21 @@
                 *   +------+------+------+------+------|    +------+------+------+------+------+
                 *   |LyrTap|      |      |      |      |    |PauBrk|  F1  |  F2  |  F3  | F10  |
                 *   `------+------+------+------+------+    +------+------+------+------+------'
-                *                 |      |      |      |    |      |      | mute |
+                *                 |PlyPau|      |      |    |      |      | mute |
                 *                 `------+------+------'    `------+------+------'
                 *
-                *   Encoder Left: Up <-> Down
-                *   Encoder Right: Left <-> Right
+                *   Encoder Left: previous song <-> next song
+                *   Encoder Right: Volume Down <-> Volume Up
                 */
 
                         bindings = <
                                 &kp ESC         _____x_____     _____x_____     _____x_____     _____x_____     &kp PSCRN       &kp F7          &kp F8          &kp F9          &kp F12
                                 &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       _____x_____     &kp SLCK        &kp F4          &kp F5          &kp F6          &kp F11
                                 ___________     _____x_____     _____x_____     _____x_____     _____x_____     &kp PAUSE_BREAK &kp F1          &kp F2          &kp F3          &kp F10
-                                                                _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     &kp C_MUTE
+                                                                &kp C_PP        _____x_____     _____x_____     _____x_____     _____x_____     &kp C_MUTE
                         >;
 
-                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp C_VOL_UP C_VOL_DN>;
+                        sensor-bindings = <&inc_dec_kp C_NEXT C_PREV &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
 
                 adjust_layer {
@@ -161,8 +161,8 @@
                 *                 |      |      |      |    |      |      |      |
                 *                 `------+------+------'    `------+------+------'
                 *
-                *   Encoder Left: Up <-> Down
-                *   Encoder Right: Left <-> Right
+                *   Encoder Left: x <-> x
+                *   Encoder Right: x <-> x
                 */
 
                         bindings = <
@@ -172,7 +172,7 @@
                                                                 _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
                         >;
 
-                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
+                        sensor-bindings = <&inc_dec_kp _____x_____ _____x_____ &inc_dec_kp _____x_____ _____x_____>;
                 };
 
                 colemakdh_layer {
