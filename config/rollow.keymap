@@ -10,8 +10,9 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #include "../T4CORUN/config.dtsi"
-#include "../T4CORUN/tapdances.dtsi"
 #include "../T4CORUN/homerowmods.dtsi"
+#include "../T4CORUN/macros.dtsi"
+#include "../T4CORUN/tapdances.dtsi"
 
 &lt {
     flavor = "tap-preferred";
@@ -152,7 +153,7 @@
                 /*
                 *
                 *   ,----------------------------------.    ,----------------------------------.
-                *   | Esc  |      |      |      |      |    |PrtScr|  F7  |  F8  |  F9  | F12  |
+                *   | Esc  |      | wdqt | wsqt |      |    |PrtScr|  F7  |  F8  |  F9  | F12  |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
                 *   | GUI  | Alt  | Ctrl | Shft |      |    |ScrLck|  F4  |  F5  |  F6  | F11  |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
@@ -166,7 +167,7 @@
                 */
 
                         bindings = <
-                                &kp ESC         _____x_____     _____x_____     _____x_____     _____x_____     &kp PSCRN       &kp F7          &kp F8          &kp F9          &kp F12
+                                &kp ESC         _____x_____     &wrap_dqt       &wrap_sqt       _____x_____     &kp PSCRN       &kp F7          &kp F8          &kp F9          &kp F12
                                 &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       _____x_____     &kp SLCK        &kp F4          &kp F5          &kp F6          &kp F11
                                 ___________     _____x_____     _____x_____     _____x_____     _____x_____     &kp PAUSE_BREAK &kp F1          &kp F2          &kp F3          &kp F10
                                                                 &kp C_PP        _____x_____     _____x_____     _____x_____     _____x_____     &kp C_MUTE
