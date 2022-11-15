@@ -17,8 +17,8 @@
 #define AD_FSLH &lt		ADJUST  FSLH
 
 //To Layer
-#define DEFAULT &to     QWERTY
-#define COLMKDH &to     COLEMAK
+#define DEFAULT &tog    QWERTY
+#define COLMKDH &tog    COLEMAK
 
 //GACS Home Row Mods QWERTY
 #define LGUI_A  &hm_gui LGUI    A
