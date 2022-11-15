@@ -16,8 +16,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp LC(LEFT), &kp SQT>
-				, <&kp LC(RIGHT), &kp SQT>
+                = <&kp LC(LEFT) &kp SQT>
+				, <&kp LC(RIGHT) &kp SQT>
                 ;
         };
 
@@ -26,8 +26,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp LC(LEFT), &kp LS(SQT)>
-				, <&kp LC(RIGHT), &kp LS(SQT)>
+                = <&kp LC(LEFT) &kp LS(SQT)>
+				, <&kp LC(RIGHT) &kp LS(SQT)>
                 ;
         };
     };
