@@ -172,7 +172,7 @@
                                                                 _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
                         >;
 
-                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
+                        sensor-bindings = <&inc_dec_kp &none &none &inc_dec_kp &none &none>;
                 };
 
                 colemakdh_layer {
