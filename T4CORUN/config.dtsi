@@ -1,10 +1,10 @@
 // Layer Definitions out toggle
 #define QWERTY  0
-#define COLEMAK 5
-#define NUMBER  1
-#define NAVI    2
-#define FUNC    3
-#define ADJUST  4
+#define COLEMAK 1
+#define NUMBER  2
+#define NAVI    3
+#define FUNC    4
+#define ADJUST  5
 
 //Basic Key Aliases
 #define ___________     &trans
@@ -17,8 +17,8 @@
 #define AD_FSLH &lt		ADJUST  FSLH
 
 //To Layer
-#define DEFAULT &tog    QWERTY
-#define COLMKDH &tog    COLEMAK
+#define DEFAULT &to 	QWERTY
+#define COLMKDH &to	    COLEMAK
 
 //GACS Home Row Mods QWERTY
 #define LGUI_A  &hm_gui LGUI    A

@@ -63,6 +63,34 @@
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
                 };
 
+                colemakdh_layer {
+
+                /*
+                *
+                *   ,----------------------------------.    ,----------------------------------.
+                *   |   Q  |   W  |   F  |   P  |   B  |    |   J  |   L  |   U  |   Y  |   '  |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   |   A  |   R  |   S  |   T  |   G  |    |   M  |   N  |   E  |   I  |   O  |
+                *   +------+------+------+------+------|    +------+------+------+------+------+
+                *   |   Z  |   X  |   C  |   D  |   V  |    |   K  |   H  |   ,  |   .  |   /  |
+                *   `------+------+------+------+------+    +------+------+------+------+------'
+                *                 |      |NUMBSP| Shft |    | Spc  |NAVTAB| mute |
+                *                 `------+------+------'    `------+------+------'
+                *
+                *   Encoder Left: Up <-> Down
+                *   Encoder Right: Left <-> Right
+                */
+
+                        bindings = <
+                                &kp Q           &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &kp SQT
+                                LGUI_A          LALT_R          LCTRL_S         LSHFT_T         &kp G           &kp M           RSHFT_N         RCTRL_E         RALT_I          RGUI_O
+                                FUN_Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         AD_FSLH
+                                                                &kp C_PP        NUM_BSP         &kp LSHFT       &kp SPACE       NAV_TAB         &kp C_MUTE
+                        >;
+
+                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
+                };
+
                 number_layer {
 
                 /*
@@ -174,34 +202,5 @@
 
                         sensor-bindings = <&inc_dec_kp &none &none &inc_dec_kp &none &none>;
                 };
-
-                colemakdh_layer {
-
-                /*
-                *
-                *   ,----------------------------------.    ,----------------------------------.
-                *   |   Q  |   W  |   F  |   P  |   B  |    |   J  |   L  |   U  |   Y  |   '  |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |   A  |   R  |   S  |   T  |   G  |    |   M  |   N  |   E  |   I  |   O  |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |   Z  |   X  |   C  |   D  |   V  |    |   K  |   H  |   ,  |   .  |   /  |
-                *   `------+------+------+------+------+    +------+------+------+------+------'
-                *                 |      |NUMBSP| Shft |    | Spc  |NAVTAB| mute |
-                *                 `------+------+------'    `------+------+------'
-                *
-                *   Encoder Left: Up <-> Down
-                *   Encoder Right: Left <-> Right
-                */
-
-                        bindings = <
-                                &kp Q           &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &kp SQT
-                                LGUI_A          LALT_R          LCTRL_S         LSHFT_T         &kp G           &kp M           RSHFT_N         RCTRL_E         RALT_I          RGUI_O
-                                FUN_Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         AD_FSLH
-                                                                _____x_____     NUM_BSP         &kp LSHFT       &kp SPACE       NAV_TAB         &kp C_MUTE
-                        >;
-
-                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
-                };
-
         };
 };
