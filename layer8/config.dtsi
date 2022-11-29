@@ -5,6 +5,7 @@
 #define NAVI    3
 #define FUNC    4
 #define ADJUST  5
+#define SYMBOL 6
 
 //Basic Key Aliases
 #define ___________     &trans
@@ -15,6 +16,7 @@
 #define NUM_BSP &lt     NUMBER  BSPC
 #define FUN_Z   &lt		FUNC    Z
 #define AD_FSLH &lt		ADJUST  FSLH
+#define ENTER_SYMBOL &lt SYMBOL ENTER
 
 //To Layer
 #define DEFAULT &to 	QWERTY
@@ -49,6 +51,9 @@
 #define S_COPY  &kp LC(C)
 #define S_PASTE &kp LC(V)
 #define S_REDO  &kp LC(Y)
+// Terminal copy/paste
+#define T_COPY  &kp LC(LS(C))
+#define T_PASTE &kp LC(LS(V))
 
 #define CLSETAB &kp LC(W)
 #define NEXTTAB &kp LC(TAB)

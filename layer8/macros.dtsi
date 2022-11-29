@@ -1,0 +1,16 @@
+/ {
+  macros {
+    ctrl_alt_del: ctrl_alt_del {
+      label = "ZM_ctrl_alt_del";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&macro_press &kp LCTRL>
+        , <&macro_press &kp LALT>
+        , <&macro_tap &kp DEL>
+        , <&macro_release &kp LCTRL>
+        , <&macro_release &kp LALT>
+        ;
+      };
+  };
+};
