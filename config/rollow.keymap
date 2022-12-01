@@ -63,16 +63,16 @@
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
                 };
 
-                colemakdh_layer {
+                workman_layer {
 
                 /*
                 *
                 *   ,----------------------------------.    ,----------------------------------.
-                *   |   Q  |   W  |   F  |   P  |   B  |    |   J  |   L  |   U  |   Y  |   '  |
+                *   |   Q  |   D  |   R  |   W  |   B  |    |   J  |   F  |   U  |   P  |   '  |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |   A  |   R  |   S  |   T  |   G  |    |   M  |   N  |   E  |   I  |   O  |
+                *   |   A  |   S  |   H  |   T  |   G  |    |   Y  |   N  |   E  |   O  |   I  |
                 *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |   Z  |   X  |   C  |   D  |   V  |    |   K  |   H  |   ,  |   .  |   /  |
+                *   |   Z  |   X  |   M  |   C  |   V  |    |   K  |   L  |   ,  |   .  |   /  |
                 *   `------+------+------+------+------+    +------+------+------+------+------'
                 *                 |      |NUMBSP| Shft |    | Spc  |NAVTAB| mute |
                 *                 `------+------+------'    `------+------+------'
@@ -82,10 +82,10 @@
                 */
 
                         bindings = <
-                                &kp Q           &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &kp SQT
-                                LGUI_A          LALT_R          LCTRL_S         LSHFT_T         &kp G           &kp M           RSHFT_N         RCTRL_E         RALT_I          RGUI_O
-                                FUN_Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &kp COMMA       &kp DOT         AD_FSLH
-                                                                &kp C_PP        NUM_BSP         &kp LSHFT       &kp SPACE       NAV_TAB         &kp C_MUTE
+                                &kp Q           &kp D           &kp R           &kp W           &kp B           &kp J           &kp F           &kp U           &kp P           &kp SQT
+                                LGUI_A          LALT_S          LCTRL_H         LSHFT_T         &kp G           &kp Y           RSHFT_N         RCTRL_E         RALT_O          RGUI_I
+                                FUN_Z           &kp X           &kp M           &kp C           &kp V           &kp K           &kp L           &kp COMMA       &kp DOT         AD_FSLH
+                                                                &ctrl_alt_del   NUM_BSP         ENTER_SYMBOL    &kp SPACE       NAV_TAB         &kp C_MUTE
                         >;
 
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
@@ -194,7 +194,7 @@
                 */
 
                         bindings = <
-                                _____x_____     _____x_____     _____x_____     &out OUT_TOG    BTClear         DEFAULT         COLMKDH         _____x_____     _____x_____     _____x_____
+                                _____x_____     _____x_____     _____x_____     &out OUT_TOG    BTClear         TO_DEFAULT_L    TO_WORKMAN_L    _____x_____     _____x_____     _____x_____
                                 BT4             BT3             BT2             BT1             BT0             _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
                                 _____x_____     _____x_____     _____x_____     &bootloader     &reset          &reset          &bootloader     _____x_____     _____x_____     ___________
                                                                 _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     _____x_____

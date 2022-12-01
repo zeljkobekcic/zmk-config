@@ -1,6 +1,6 @@
 // Layer Definitions out toggle
 #define QWERTY  0
-#define COLEMAK 1
+#define WORKMAN 1
 #define NUMBER  2
 #define NAVI    3
 #define FUNC    4
@@ -19,8 +19,8 @@
 #define ENTER_SYMBOL &lt SYMBOL ENTER
 
 //To Layer
-#define DEFAULT &to 	QWERTY
-#define COLMKDH &to	    COLEMAK
+#define TO_DEFAULT_L &to QWERTY
+#define TO_WORKMAN_L &to WORKMAN
 
 //GACS Home Row Mods QWERTY
 #define LGUI_A  &hm_gui LGUI    A
@@ -33,16 +33,16 @@
 #define RALT_L  &hm_alt RALT    L
 #define RGUI_QT &hm_gui RGUI    SQT
 
-//GACS Home Row Mods COLEMAKDH
+//GACS Home Row Mods WORKMAN
 #define LGUI_A  &hm_gui LGUI    A
-#define LALT_R  &hm_alt LALT    R
-#define LCTRL_S &hm_ctl LCTRL   S
+#define LALT_S  &hm_alt LALT    S
+#define LCTRL_H &hm_ctl LCTRL   H
 #define LSHFT_T &hm_sft LSHFT   T
 
 #define RSHFT_N &hm_sft RSHFT   N
 #define RCTRL_E &hm_ctl RCTRL   E
-#define RALT_I  &hm_alt RALT    I
-#define RGUI_O	&hm_gui RGUI    O
+#define RALT_O  &hm_alt RALT    O
+#define RGUI_I	&hm_gui RGUI    I
 
 
 //Shortcuts
