@@ -10,7 +10,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #include "../layer8/config.dtsi"
-#include "../layer8/homerowmods.dtsi"
+#include "../layer8/tap_dances.dtsi"
+#include "../layer8/mod_morphs.dtsi"
 #include "../layer8/macros.dtsi"
 
 &lt {
@@ -34,201 +35,77 @@
 
         keymap {
                 compatible = "zmk,keymap";
-
-                default_layer {
-
-                /*
-                *
-                *   ,----------------------------------.    ,----------------------------------.
-                *   |   Q  |   W  |   E  |   R  |   T  |    |   Y  |   U  |   I  |   O  |   P  |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |   A  |   S  |   D  |   F  |   G  |    |   H  |   J  |   K  |   L  |   '  |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |   Z  |   X  |   C  |   V  |   B  |    |   N  |   M  |   ,  |   .  |   /  |
-                *   `------+------+------+------+------+    +------+------+------+------+------'
-                *                 |plypau|NUMBSP| Shft |    | Spc  |NAVTAB| mute |
-                *                 `------+------+------'    `------+------+------'
-                *
-                *   Encoder Left: Up <-> Down
-                *   Encoder Right: Left <-> Right
-                */
-
+                colemak_layer {
                         bindings = <
-                                &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P
-                                LGUI_A          LALT_S          LCTRL_D         LSHFT_F         &kp G           &kp H           RSHFT_J         RCTRL_K         RALT_L          RGUI_QT
-                                FUN_Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         AD_FSLH
-                                                                &ctrl_alt_del   NUM_BSP         ENTER_SYMBOL    &kp SPACE       NAV_TAB         &kp C_MUTE
+                                &td ESC Q       &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           NAV_SQT
+                                LGUI_A          LALT_R          &kp S           &kp T           &kp G           &kp M           RSHFT_N         RCTRL_E         RALT_I          RGUI_O
+                                &kp Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &td MINUS COMMA &td EXCL DOT    AD_FSLH
+                                                                &ctrl_alt_del   &sk LSHFT       &td SPACE TAB   &td LCTRL ENTER       TO_SYMBOL       &kp C_MUTE
                         >;
-
-                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
+                        sensor-bindings = <&inc_dec_kp LA(F) LA(B) &inc_dec_kp DEL BSPC>;
                 };
-
-                workman_layer {
-
-                /*
-                *
-                *   ,----------------------------------.    ,----------------------------------.
-                *   |   Q  |   D  |   R  |   W  |   B  |    |   J  |   F  |   U  |   P  |   '  |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |   A  |   S  |   H  |   T  |   G  |    |   Y  |   N  |   E  |   O  |   I  |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |   Z  |   X  |   M  |   C  |   V  |    |   K  |   L  |   ,  |   .  |   /  |
-                *   `------+------+------+------+------+    +------+------+------+------+------'
-                *                 |      |NUMBSP| Shft |    | Spc  |NAVTAB| mute |
-                *                 `------+------+------'    `------+------+------'
-                *
-                *   Encoder Left: Up <-> Down
-                *   Encoder Right: Left <-> Right
-                */
-
+                qwerty_layer {
                         bindings = <
-                                &kp Q           &kp D           &kp R           &kp W           &kp B           &kp J           &kp F           &kp U           &kp P           &kp SQT
-                                LGUI_A          LALT_S          LCTRL_H         LSHFT_T         &kp G           &kp Y           RSHFT_N         RCTRL_E         RALT_O          RGUI_I
-                                FUN_Z           &kp X           &kp M           &kp C           &kp V           &kp K           &kp L           &kp COMMA       &kp DOT         AD_FSLH
-                                                                &ctrl_alt_del   NUM_BSP         ENTER_SYMBOL    &kp SPACE       NAV_TAB         &kp C_MUTE
+                                &td ESC Q       &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P
+                                LGUI_A          LALT_S          &kp D           &kp F           &kp G           &kp H           RSHFT_J         RCTRL_K         RALT_L          RGUI_QT
+                                &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         AD_FSLH
+                                                                &ctrl_alt_del   &sk LSHFT       &td SPACE TAB   &td LCTRL ENTER       TO_SYMBOL       &kp C_MUTE
                         >;
-
-                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
+                        sensor-bindings = <&inc_dec_kp LA(F) LA(B) &inc_dec_kp DEL BSPC>;
                 };
-
+                gaming_layer {
+                        bindings = <
+                                &kp TAB         &kp Q           &kp W           &kp E           &kp R           &kp Y           &kp U           &kp I           &kp O           &kp P
+                                &kp LSHFT       &kp A           &kp S           &kp D           &kp G           &kp H           RSHFT_J         RCTRL_K         RALT_L          RGUI_QT
+                                &kp LCTRL       &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         AD_FSLH
+                                                                &kp LA(ENTER)   &td ENTER ESC   &kp SPACE       &kp SPACE       NAV_BSP         &kp C_MUTE
+                        >;
+                        sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP &inc_dec_kp RIGHT LEFT>;
+                };
+                symbol_layer {
+                        bindings = <
+                                &kp ESC         &kp AT          &kp HASH        &kp DOLLAR      &kp PERCENT     &kp PLUS        &kp AMPERSAND    &kp LPAR        &kp RPAR       &bspc_del
+                                &kp TAB         &sk RALT        &sk LGUI        &kp AT          &kp SEMICOLON   &kp PIPE        &kp TILDE        &kp LBKT        &kp RBKT       &kp EQUAL
+                                S_UNDO          S_CUT           S_COPY          S_REDO          S_PASTE         &kp BSLH        &kp GRAVE        &kp LBRC        &kp RBRC       &kp MINUS
+                                                                ___________     TO_DEFAULT      ___________     ___________     TO_NUMBER       ___________
+                        >;
+                        sensor-bindings = <&inc_dec_kp LC(LS(C)) LC(LS(V)) &inc_dec_kp DEL BSPC>;
+                };
                 number_layer {
-
-                /*
-                *
-                *   ,----------------------------------.    ,----------------------------------.
-                *   | Esc  |      |      |   ~  |   `  |    | tLBKT|   7  |   8  |   9  | tRBKT|
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   | GUI  | Alt  | Ctrl | Shft |   .  |    |   ;  |   4  |   5  |   6  |   =  |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   | Undo | Cut  | Copy | Pste | Redo |    |   -  |   1  |   2  |   3  |   \  |
-                *   `------+------+------+------+------+    +------+------+------+------+------'
-                *                 |      |LyrTap|      |    | Spc  |   0  | mute |
-                *                 `------+------+------'    `------+------+------'
-                *
-                *   Encoder Left: x <-> x
-                *   Encoder Right: Backspace <-> Del
-                */
-
                         bindings = <
-                                &kp ESC         _____x_____     _____x_____     &kp TILDE       &kp GRAVE       &kp FSLH        &kp N7          &kp N8          &kp N9          &kp PLUS
-                                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       &kp DOT         &kp SEMI        &kp N4          &kp N5          &kp N6          &kp EQUAL
-                                S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          &kp MINUS       &kp N1          &kp N2          &kp N3          &kp BSLH
-                                                                T_COPY          T_PASTE         _____x_____     &kp SPACE       &kp N0          &kp C_MUTE
+                                &kp ESC         _____x_____     _____x_____     &kp TILDE       &kp PERCENT     &kp PLUS        &kp N7          &kp N8          &kp N9          &bspc_del
+                                &kp TAB         &sk RALT        &sk LGUI        &sk LSHFT       &kp DOT         &kp SEMI        &kp N4          &kp N5          &kp N6          &kp EQUAL
+                                S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          &kp N0          &kp N1          &kp N2          &kp N3          &kp MINUS
+                                                                ___________     TO_DEFAULT      ___________     ___________     TO_NAV          ___________
                         >;
-
-                        sensor-bindings = <&inc_dec_kp &none &none &inc_dec_kp DEL BSPC>;
+                        sensor-bindings = <&inc_dec_kp LC(LS(C)) LC(LS(V)) &inc_dec_kp DEL BSPC>;
                 };
-
                 nav_layer {
-
-                /*
-                *
-                *   ,----------------------------------.    ,----------------------------------.
-                *   | Esc  | Home | Up   | End  | PgUp |    | Ins  |      |      |      |      |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   | Caps | Left | Down | Right| PgDn |    | Del  | Shft | Ctrl | Alt  | GUI  |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   | Undo | Cut  | Copy | Pste | Redo |    |      | Spc  | Tab  |      | App  |
-                *   `------+------+------+------+------+    +------+------+------+------+------'
-                *                 | close| Bpsc | Ent  |    |      |LyrTap|      |
-                *                 `------+------+------'    `------+------+------'
-                *
-                *   Encoder Left: Previous Browser Tab <-> Next Browser Tab
-                *   Encoder Right: x <-> x
-                */
-
                         bindings = <
                                 &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       &kp INS         _____x_____     _____x_____     _____x_____     _____x_____
                                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL         &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
                                 S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          _____x_____     &kp SPACE       &kp TAB         _____x_____     &kp K_APP
-                                                                CLSETAB         &kp BSPC        &kp ENTER       _____x_____     ___________     _____x_____
+                                                                ___________     TO_DEFAULT      ___________     ___________     TO_FUNC         ___________
                             >;
-
-                        sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp &none &none>;
+                        sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp DEL BSPC>;
                 };
-
                 function_layer {
-
-                /*
-                *
-                *   ,----------------------------------.    ,----------------------------------.
-                *   | Esc  |      | wdqt | wsqt |      |    |PrtScr|  F7  |  F8  |  F9  | F12  |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   | GUI  | Alt  | Ctrl | Shft |      |    |ScrLck|  F4  |  F5  |  F6  | F11  |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |LyrTap|      |      |      |      |    |PauBrk|  F1  |  F2  |  F3  | F10  |
-                *   `------+------+------+------+------+    +------+------+------+------+------'
-                *                 |PlyPau|      |      |    |      |      | mute |
-                *                 `------+------+------'    `------+------+------'
-                *
-                *   Encoder Left: previous song <-> next song
-                *   Encoder Right: Volume Down <-> Volume Up
-                */
-
                         bindings = <
                                 &kp ESC         _____x_____     ___________     ___________     _____x_____     &kp PSCRN       &kp F7          &kp F8          &kp F9          &kp F12
                                 &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       _____x_____     &kp SLCK        &kp F4          &kp F5          &kp F6          &kp F11
                                 ___________     _____x_____     _____x_____     _____x_____     _____x_____     &kp PAUSE_BREAK &kp F1          &kp F2          &kp F3          &kp F10
-                                                                &ctrl_alt_del   _____x_____     _____x_____     _____x_____     _____x_____     &kp C_MUTE
+                                                                ___________     TO_DEFAULT      ___________     ___________     TO_FUNC         ___________
                         >;
-
                         sensor-bindings = <&inc_dec_kp C_NEXT C_PREV &inc_dec_kp C_VOL_UP C_VOL_DN>;
                 };
-
                 adjust_layer {
-
-                /*
-                *
-                *   ,----------------------------------.    ,----------------------------------.
-                *   |      |      |      |OutTog|BT Clr|    |QWERTY|CLMKDH|      |      |      |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   | BT4  | BT3  | BT2  | BT1  | BT0  |    |      |      |      |      |      |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |      |      |      | boot |reset |    |reset |boot  |      |      |LyrTap|
-                *   `------+------+------+------+------+    +------+------+------+------+------'
-                *                 |      |      |      |    |      |      |      |
-                *                 `------+------+------'    `------+------+------'
-                *
-                *   Encoder Left: x <-> x
-                *   Encoder Right: x <-> x
-                */
-
                         bindings = <
-                                _____x_____     _____x_____     _____x_____     &out OUT_TOG    BTClear         TO_DEFAULT_L    TO_WORKMAN_L    _____x_____     _____x_____     _____x_____
+                                _____x_____     _____x_____     _____x_____     &out OUT_TOG    BTClear         TO_DEFAULT      TO_QWERTY       TO_GAMING       _____x_____     _____x_____
                                 BT4             BT3             BT2             BT1             BT0             _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
                                 _____x_____     _____x_____     _____x_____     &bootloader     &reset          &reset          &bootloader     _____x_____     _____x_____     ___________
-                                                                _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
+                                                                TO_DEFAULT      ___________     ___________     ___________     TO_FUNC         ___________
                         >;
-
-                        sensor-bindings = <&inc_dec_kp &none &none &inc_dec_kp &none &none>;
-                };
-
-                symbol_layer {
-
-                /*
-                *
-                *   ,----------------------------------.    ,----------------------------------.
-                *   |      |      |      |OutTog|BT Clr|    |QWERTY|CLMKDH|      |      |      |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   | BT4  | BT3  | BT2  | BT1  | BT0  |    |      |      |      |      |      |
-                *   +------+------+------+------+------|    +------+------+------+------+------+
-                *   |      |      |      | boot |reset |    |reset |boot  |      |      |LyrTap|
-                *   `------+------+------+------+------+    +------+------+------+------+------'
-                *                 |      |      |      |    |      |      |      |
-                *                 `------+------+------'    `------+------+------'
-                *
-                *   Encoder Left: x <-> x
-                *   Encoder Right: x <-> x
-                */
-
-                        bindings = <
-                                &kp EXCL        &kp AT          &kp HASH        &kp DOLLAR      &kp PERCENT     &kp CARET       &kp AMPERSAND   &kp LPAR        &kp RPAR        &kp ASTERISK
-                                _____x_____     _____x_____     _____x_____     _____x_____     &kp SEMICOLON   &kp PIPE        &kp TILDE       &kp LBKT        &kp RBKT        &kp EQUAL
-                                _____x_____     _____x_____     _____x_____     &bootloader     &kp COLON       &kp BSLH        &kp MINUS       &kp LBRC        &kp RBRC        &kp PLUS
-                                                                _____x_____     _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
-                        >;
-
-                        sensor-bindings = <&inc_dec_kp &none &none &inc_dec_kp &none &none>;
+                        sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP &inc_dec_kp DEL BSPC>;
                 };
         };
 };

@@ -1,30 +1,8 @@
 / {
     behaviors {
-        hm_gui: homerow_gui {
+        hm: homerow_mod {
         compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_GUI";
-        #binding-cells = <2>;
-        tapping-term-ms = <TAPPING_TERM_GUIALT>;
-        quick-tap-ms = <0>;
-        flavor = "tap-preferred";
-        global-quick-tap;
-        bindings = <&kp>, <&kp>;
-        };
-
-        hm_alt: homerow_alt {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_ALT";
-        #binding-cells = <2>;
-        tapping-term-ms = <TAPPING_TERM_GUIALT>;
-        quick-tap-ms = <0>;
-        flavor = "tap-preferred";
-        global-quick-tap;
-        bindings = <&kp>, <&kp>;
-        };
-
-        hm_ctl: homerow_ctrl {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_CTRL";
+        label = "HOMEROW_MOD";
         #binding-cells = <2>;
         tapping-term-ms = <TAPPING_TERM>;
         quick-tap-ms = <0>;
@@ -32,25 +10,4 @@
         global-quick-tap;
         bindings = <&kp>, <&kp>;
         };
-
-        hm_sft: homerow_shift {
-        compatible = "zmk,behavior-hold-tap";
-        label = "HOMEROW_SHIFT";
-        #binding-cells = <2>;
-        tapping-term-ms = <TAPPING_TERM>;
-        quick-tap-ms = <0>;
-        flavor = "tap-preferred";
-        global-quick-tap;
-        bindings = <&kp>, <&kp>;
-        };
-
-		lt_pky: layertap_pinky {
-        compatible = "zmk,behavior-hold-tap";
-        label = "LAYERTAP_PINKY";
-        #binding-cells = <2>;
-        tapping-term-ms = <TAPPING_TERM_PINKY>;
-        flavor = "tap-preferred";
-        bindings = <&kp>, <&kp>;
-        };
-    };
 };

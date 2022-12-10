@@ -1,11 +1,12 @@
 // Layer Definitions out toggle
-#define QWERTY  0
-#define WORKMAN 1
-#define NUMBER  2
-#define NAVI    3
-#define FUNC    4
-#define ADJUST  5
-#define SYMBOL 6
+#define COLEMAK 0
+#define QWERTY  1
+#define GAMING  2
+#define SYMBOL  3
+#define NUMBER  4
+#define NAVI    5
+#define FUNC    6
+#define ADJUST  7
 
 //Basic Key Aliases
 #define ___________     &trans
@@ -14,36 +15,57 @@
 //Layer Taps
 #define NAV_TAB &lt     NAVI    TAB
 #define NUM_BSP &lt     NUMBER  BSPC
+#define NAV_BSP &lt     NAVI    BSPC
+#define NUM_TAB &lt     NUMBER  TAB
 #define FUN_Z   &lt		FUNC    Z
+#define FUN_X   &lt		FUNC    X
 #define AD_FSLH &lt		ADJUST  FSLH
 #define ENTER_SYMBOL &lt SYMBOL ENTER
+#define NAV_SQT &lt NAVI SQT
 
 //To Layer
-#define TO_DEFAULT_L &to QWERTY
-#define TO_WORKMAN_L &to WORKMAN
+#define TO_DEFAULT &to COLEMAK
+#define TO_GAMING &to GAMING
+#define TO_QWERTY &to QWERTY
+#define TO_SYMBOL &to SYMBOL
+#define TO_NUMBER &to NUMBER
+#define TO_NAV &to NAVI
+#define TO_ADJUST &to ADJUST
+#define TO_FUNC &to FUNC
 
 //GACS Home Row Mods QWERTY
-#define LGUI_A  &hm_gui LGUI    A
-#define LALT_S  &hm_alt LALT    S
-#define LCTRL_D &hm_ctl LCTRL   D
-#define LSHFT_F &hm_sft LSHFT   F
+#define LGUI_A  &td LGUI    A
+#define LALT_S  &td LALT    S
+#define LCTRL_D &td LCTRL   D
+#define LSHFT_F &td LSHFT   F
 
-#define RSHFT_J &hm_sft RSHFT   J
-#define RCTRL_K &hm_ctl RCTRL   K
-#define RALT_L  &hm_alt RALT    L
-#define RGUI_QT &hm_gui RGUI    SQT
+#define RSHFT_J &td RSHFT   J
+#define RCTRL_K &td RCTRL   K
+#define RALT_L  &td RALT    L
+#define RGUI_QT &td RGUI    SQT
 
 //GACS Home Row Mods WORKMAN
-#define LGUI_A  &hm_gui LGUI    A
-#define LALT_S  &hm_alt LALT    S
-#define LCTRL_H &hm_ctl LCTRL   H
-#define LSHFT_T &hm_sft LSHFT   T
+#define LGUI_A  &td LGUI    A
+#define LGUI_T  &td LGUI    T
+#define LALT_S  &td LALT    S
+#define LCTRL_H &td LCTRL   H
+#define LSHFT_T &td LSHFT   T
 
-#define RSHFT_N &hm_sft RSHFT   N
-#define RCTRL_E &hm_ctl RCTRL   E
-#define RALT_O  &hm_alt RALT    O
-#define RGUI_I	&hm_gui RGUI    I
+#define RSHFT_N &td RSHFT   N
+#define RCTRL_E &td RCTRL   E
+#define RALT_O  &td RALT    O
+#define RGUI_I	&td RGUI    I
 
+//GACS Home Row Mods WORKMAN
+#define LGUI_A  &td LGUI    A
+#define LALT_R  &td LALT    R
+#define LCTRL_S &td LCTRL   S
+#define LSHFT_T &td LSHFT   T
+
+#define RSHFT_N &td RSHFT   N
+#define RCTRL_E &td RCTRL   E
+#define RALT_I  &td RALT    I
+#define RGUI_O	&td RGUI    O
 
 //Shortcuts
 #define S_UNDO  &kp LC(Z)
@@ -51,9 +73,10 @@
 #define S_COPY  &kp LC(C)
 #define S_PASTE &kp LC(V)
 #define S_REDO  &kp LC(Y)
+
 // Terminal copy/paste
-#define T_COPY  &kp LC(LS(C))
-#define T_PASTE &kp LC(LS(V))
+#define T_COPY  LC(LS(C))
+#define T_PASTE LC(LS(V))
 
 #define CLSETAB &kp LC(W)
 #define NEXTTAB &kp LC(TAB)
@@ -68,6 +91,6 @@
 #define BT4     &bt BT_SEL 4
 
 //Behavior Configuration
-#define TAPPING_TERM 200
-#define TAPPING_TERM_GUIALT 230
-#define TAPPING_TERM_PINKY 250
+#define TAPPING_TERM 300
+#define TAPPING_TERM_GUIALT 330
+#define TAPPING_TERM_PINKY 350
