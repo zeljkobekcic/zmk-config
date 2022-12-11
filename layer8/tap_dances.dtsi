@@ -3,7 +3,7 @@
 
 / {
     behaviors {
-        td_sticky: tapdance_sticky {
+        td_s: tapdance_sticky {
               compatible = "zmk,behavior-hold-tap";
               label = "TAPDANCE_STICKY";
               #binding-cells = <2>;

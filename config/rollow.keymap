@@ -38,18 +38,18 @@
                 colemak_layer {
                         bindings = <
                                 &td ESC Q       &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           NAV_SQT
-                                LGUI_A          LALT_R          &kp S           &kp T           &kp G           &kp M           RSHFT_N         RCTRL_E         RALT_I          RGUI_O
+                                LGUI_A          LALT_R          &kp S           &kp T           &kp G           &kp M           &kp N           &kp E           RALT_I          RGUI_O
                                 &kp Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &td MINUS COMMA &td EXCL DOT    AD_FSLH
-                                                                &ctrl_alt_del   &sk LSHFT       &td SPACE TAB   &td LCTRL ENTER       TO_SYMBOL       &kp C_MUTE
+                                                                &ctrl_alt_del   &sk LSHFT       &td TAB SPACE   &td LCTRL ENTER       TO_SYMBOL       &kp C_MUTE
                         >;
                         sensor-bindings = <&inc_dec_kp LA(F) LA(B) &inc_dec_kp DEL BSPC>;
                 };
                 qwerty_layer {
                         bindings = <
                                 &td ESC Q       &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P
-                                LGUI_A          LALT_S          &kp D           &kp F           &kp G           &kp H           RSHFT_J         RCTRL_K         RALT_L          RGUI_QT
+                                LGUI_A          LALT_S          &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           RALT_L          RGUI_QT
                                 &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         AD_FSLH
-                                                                &ctrl_alt_del   &sk LSHFT       &td SPACE TAB   &td LCTRL ENTER       TO_SYMBOL       &kp C_MUTE
+                                                                &ctrl_alt_del   &sk LSHFT       &td TAB SPACE   &td LCTRL ENTER       TO_SYMBOL       &kp C_MUTE
                         >;
                         sensor-bindings = <&inc_dec_kp LA(F) LA(B) &inc_dec_kp DEL BSPC>;
                 };
@@ -75,7 +75,7 @@
                         bindings = <
                                 &kp ESC         _____x_____     _____x_____     &kp TILDE       &kp PERCENT     &kp PLUS        &kp N7          &kp N8          &kp N9          &bspc_del
                                 &kp TAB         &sk RALT        &sk LGUI        &sk LSHFT       &kp DOT         &kp SEMI        &kp N4          &kp N5          &kp N6          &kp EQUAL
-                                S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          &kp N0          &kp N1          &kp N2          &kp N3          &kp MINUS
+                                S_UNDO          S_CUT           S_COPY          S_REDO          S_PASTE         &kp N0          &kp N1          &kp N2          &kp N3          &kp MINUS
                                                                 ___________     TO_DEFAULT      ___________     ___________     TO_NAV          ___________
                         >;
                         sensor-bindings = <&inc_dec_kp LC(LS(C)) LC(LS(V)) &inc_dec_kp DEL BSPC>;
@@ -84,7 +84,7 @@
                         bindings = <
                                 &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       &kp INS         _____x_____     _____x_____     _____x_____     _____x_____
                                 &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL         &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
-                                S_UNDO          S_CUT           S_COPY          S_PASTE         S_REDO          _____x_____     &kp SPACE       &kp TAB         _____x_____     &kp K_APP
+                                S_UNDO          S_CUT           S_COPY          S_REDO          S_PASTE         _____x_____     &kp SPACE       &kp TAB         _____x_____     &kp K_APP
                                                                 ___________     TO_DEFAULT      ___________     ___________     TO_FUNC         ___________
                             >;
                         sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp DEL BSPC>;
