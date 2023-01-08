@@ -8,5 +8,33 @@
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_RSFT)>;
         };
+        msfs_mix_dn: msfs_mix_down_lean {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MSFS_MIXTURE_DOWN_OR_LEAN";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(F2))>, <&kp LS(LC(F1))>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+        };
+        msfs_mix_up: msfs_mix_up_rich {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MSFS_MIXTURE_UP_OR_RICH";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(F3))>, <&kp LS(LC(F4))>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+        };
+        msfs_ppitch_dn: msfs_prop_pitch_down_lo {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MSFS_PROPELLER_PITCH_DOWN_OR_LO";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F2)>, <&kp LC(F1)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+        };
+        msfs_ppitch_up: msfs_prop_pitch_up_hi {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MSFS_PROPELLER_PITCH_UP_OR_HI";
+            #binding-cells = <0>;
+            bindings = <&kp LC(F3)>, <&kp LC(F4)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+        };
     };
 };

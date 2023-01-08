@@ -1,4 +1,15 @@
 // Layer Definitions out toggle
+#ifdef REVIUNG41
+#define DEFAULT 0
+#define SYMBOLS 1
+#define NUMBERS 2
+#define ADJUST 3
+#define NAVI 4
+#define GAMING 5
+#define MSFS 6
+#endif
+
+#ifdef ROLLOW
 #define COLEMAK 0
 #define QWERTY  1
 #define GAMING  2
@@ -7,10 +18,13 @@
 #define NAVI    5
 #define FUNC    6
 #define ADJUST  7
+#endif
 
 //Basic Key Aliases
-#define ___________     &trans
-#define _____x_____     &none
+#define ___________ &trans
+#define _____x_____ &none
+#define ________ &trans
+#define XXXXXXXX &none
 
 //Layer Taps
 #define NAV_TAB &lt     NAVI    TAB
@@ -24,6 +38,7 @@
 #define NAV_SQT &lt NAVI SQT
 
 //To Layer
+#ifdef ROLLOW
 #define TO_DEFAULT &to COLEMAK
 #define TO_GAMING &to GAMING
 #define TO_QWERTY &to QWERTY
@@ -32,6 +47,7 @@
 #define TO_NAV &to NAVI
 #define TO_ADJUST &to ADJUST
 #define TO_FUNC &to FUNC
+#endif
 
 //GACS Home Row Mods QWERTY
 #define LGUI_A  &td LGUI    A
