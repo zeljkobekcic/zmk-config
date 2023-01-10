@@ -3,6 +3,13 @@
 
 / {
     behaviors {
+        td_c_esc_gr: tap_dance_ctrl_esc_grave {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_CTRL_ESC_GRAVE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&td LCTRL ESC>, <&kp GRAVE>;
+        };
         td_s: tapdance_sticky {
               compatible = "zmk,behavior-hold-tap";
               label = "TAPDANCE_STICKY";
