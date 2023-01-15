@@ -29,9 +29,9 @@
 
                 symbols_layer {
                         bindings = <
-   ________ &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT            &kp CARET &kp AMPS &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
-   ________ &kp MINUS &kp KP_PLUS XXXXXXXX XXXXXXXX &kp UNDERSCORE       &kp EQUAL  &kp UNDERSCORE   &kp TILDE &kp LBRC  &kp RBRC  &kp DQT
-   ________ &kp UNDERSCORE  XXXXXXXX XXXXXXXX &kp CLCK  &kp BACKSLASH    &kp AT  &kp MINUS &kp PIPE  &kp LBKT  &kp RBKT &mt RSHFT RET
+   ________ &kp EXCL  &kp AT      &kp HASH &kp DLLR &kp PRCNT         &kp CARET    &kp AMPS        &kp STAR  &kp LPAR  &kp RPAR  ________
+   ________ &kp MINUS &kp KP_PLUS XXXXXXXX XXXXXXXX &kp UNDER         &kp EQUAL    &kp UNDERSCORE  &kp TILDE &kp LBRC  &kp RBRC  &kp DQT
+   ________ &kp UNDER XXXXXXXX    XXXXXXXX &kp CLCK  &kp BACKSLASH    &kp KP_PLUS  &kp MINUS       &kp PIPE  &kp LBKT  &kp RBKT ________
                                  ________      ________       &kp RET        &mo ADJUST       ________
                         >;
                 };
