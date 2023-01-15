@@ -7,7 +7,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_CTRL_ESC_GRAVE";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             bindings = <&td LCTRL ESC>, <&kp GRAVE>;
         };
         td_s: tapdance_sticky {
