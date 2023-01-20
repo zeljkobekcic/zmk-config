@@ -107,6 +107,6 @@
 #define BT4     &bt BT_SEL 4
 
 //Behavior Configuration
-#define TAPPING_TERM 300
-#define TAPPING_TERM_GUIALT 330
-#define TAPPING_TERM_PINKY 350
+#define TAPPING_TERM 150
+#define TAPPING_TERM_GUIALT 200
+#define TAPPING_TERM_PINKY 200
