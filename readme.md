@@ -24,3 +24,33 @@ My Notes:
 	Mouse Emulation
 	Dynamic Macros
 	```
+
+## Build
+
+Inside the zmk root directory you simply run the following commands depending on the desired
+keyboard config:
+
+### Reviung41
+
+```bash
+west build -b nice_nano_v2 -d build/reviung41 -- -DSHIELD=reviung41 -DZMK_CONFIG="${HOME}/git/personal/zmk-config/config"
+```
+
+### Rollow
+
+```bash
+for side in left right; do
+  west build -b nice_nano_v2 -d "build/rollow_${side}" -- -DSHIELD=rollow -DZMK_CONFIG="${HOME}/git/personal/zmk-config/config"
+done
+```
+
+## Flashing
+
+Put the nice nano into flash mode. To do that push the reset button two times and the control LED will begin to pulse slowly
+You may then 'mount' the board and copy a firmware onto it, e.g. for the Reviung41:
+
+```bash
+udisksctl mount -b /dev/disk/by-label/NICENANO && cp /path/to/zmk/build/reviung41/zephyr/zmk.uf2 "/run/media/$(whoami)/NICENANO"
+```
+
+That's it, your new firmware is active 😁
