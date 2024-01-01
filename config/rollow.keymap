@@ -104,7 +104,7 @@
                         bindings = <
                                 _____x_____     _____x_____     _____x_____     &out OUT_TOG    BTClear         TO_DEFAULT      TO_QWERTY       TO_GAMING       _____x_____     _____x_____
                                 BT4             BT3             BT2             BT1             BT0             _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
-                                _____x_____     _____x_____     _____x_____     &bootloader     &reset          &reset          &bootloader     _____x_____     _____x_____     ___________
+                                _____x_____     _____x_____     _____x_____     &bootloader     _____x_____     _____x_____     &bootloader     _____x_____     _____x_____     ___________
                                                                 TO_DEFAULT      ___________     ___________     ___________     TO_FUNC         ___________
                         >;
                         sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP &inc_dec_kp DEL BSPC>;
