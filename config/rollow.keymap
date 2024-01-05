@@ -51,7 +51,7 @@
             &kp TAB   XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX    XXXXXXXX  &kp HOME  &kp END   &kp BSPC  &kp DEL
             &sk LSHFT &sk LCTRL &sk LALT  &sk LCMD  XXXXXXXX    XXXXXXXX  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
             XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX    XXXXXXXX  XXXXXXXX  &kp PG_DN &kp PG_UP XXXXXXXX 
-                                _______   _______   _______     _______   _______   _______
+                                ___________  ___________  ___________    ___________  ___________  ___________
                 >;
             sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp DEL BSPC>;
         };
@@ -60,7 +60,7 @@
             &kp ESC     &kp DLR     &kp PERC    &kp LPRN    &kp RPRN    &kp CIRC    &kp TILD    &kp GRV     &kp PIPE    &kp BSLS  
             &kp MINS    &kp PLUS    &kp EQL     &kp LCBR    &kp RCBR    &kp HASH    &sk LCMD    &sk LALT    &sk LCTRL   &sk LSHFT  
             &kp UNDS    &kp ASTR    &kp AT      &kp LBRC    &kp RBRC    XXXXXXXX    &kp AMPR    &kp SCLN    &kp COLN    &kp EXLM  
-                                    ________    &mo NAV     ________    ________    ________    ________
+                                ___________  ___________  ___________    ___________  ___________  ___________
 
             >;
             sensor-bindings = <&inc_dec_kp LC(LS(C)) LC(LS(V)) &inc_dec_kp DEL BSPC>;
