@@ -27,87 +27,61 @@
 };
 
 / {
-        chosen {
-                zmk,matrix_transform = &five_column_transform;
+    chosen {
+        zmk,matrix_transform = &five_column_transform;
 	};
 
-        behaviors {
-        };
+    behaviors {
+    };
 
 
-        keymap {
-                compatible = "zmk,keymap";
-                colemak_layer {
-                        bindings = <
-                                &td ESC Q       &kp W           &kp F           &kp P           &kp B           &kp J           &kp L           &kp U           &kp Y           &kp BSPC
-                                LGUI_A          LALT_R          &kp S           &kp T           &kp G           &kp M           &kp N           &kp E           RALT_I          RGUI_O
-                                &kp Z           &kp X           &kp C           &kp D           &kp V           &kp K           &kp H           &td MINUS COMMA &td EXCL DOT    AD_FSLH
-                                                                &ctrl_alt_del   &sk LSHFT       &td LCTRL ENTER       &td TAB SPACE   TO_SYMBOL       &kp C_MUTE
-                        >;
-                        sensor-bindings = <&inc_dec_kp LA(F) LA(B) &inc_dec_kp DEL BSPC>;
-                };
-                qwerty_layer {
-                        bindings = <
-                                &td ESC Q       &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P
-                                LGUI_A          LALT_S          &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           RALT_L          RGUI_QT
-                                &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         AD_FSLH
-                                                                &ctrl_alt_del   &sk LSHFT       &td LCTRL ENTER       &td TAB SPACE   TO_SYMBOL       &kp C_MUTE
-                        >;
-                        sensor-bindings = <&inc_dec_kp LA(F) LA(B) &inc_dec_kp DEL BSPC>;
-                };
-                gaming_layer {
-                        bindings = <
-                                &kp TAB         &kp Q           &kp W           &kp E           &kp R           &kp Y           &kp U           &kp I           &kp O           &kp P
-                                &kp LSHFT       &kp A           &kp S           &kp D           &kp G           &kp H           RSHFT_J         RCTRL_K         RALT_L          RGUI_QT
-                                &kp LCTRL       &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         AD_FSLH
-                                                                &kp LA(ENTER)   &td ENTER ESC   &kp SPACE       &kp SPACE       NAV_BSP         &kp C_MUTE
-                        >;
-                        sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP &inc_dec_kp RIGHT LEFT>;
-                };
-                symbol_layer {
-                        bindings = <
-                                &kp ESC         &kp AT          &kp HASH        &kp DOLLAR      &kp PERCENT     &kp PLUS        &kp AMPERSAND    &kp LPAR        &kp RPAR       &bspc_del
-                                &kp TAB         &sk RALT        &kp SQT         &kp AT          &td SEMICOLON COLON   &kp PIPE        &kp TILDE        &kp LBKT        &kp RBKT       &td LSHFT EQUAL
-                                S_UNDO          S_CUT           S_COPY          S_REDO          S_PASTE         &kp BSLH        &kp GRAVE        &kp LBRC        &kp RBRC       &kp MINUS
-                                                                ___________     TO_DEFAULT      ___________     ___________     TO_NUMBER       ___________
-                        >;
-                        sensor-bindings = <&inc_dec_kp LC(LS(C)) LC(LS(V)) &inc_dec_kp DEL BSPC>;
-                };
-                number_layer {
-                        bindings = <
-                                &kp ESC         _____x_____     _____x_____     &kp TILDE       &kp PERCENT     &kp PLUS        &kp N7          &kp N8          &kp N9          &bspc_del
-                                &kp TAB         &sk RALT        &sk LGUI        &sk LSHFT       &kp DOT         &kp SEMI        &kp N4          &kp N5          &kp N6          &kp EQUAL
-                                S_UNDO          S_CUT           S_COPY          S_REDO          S_PASTE         &kp N0          &kp N1          &kp N2          &kp N3          &kp MINUS
-                                                                ___________     TO_DEFAULT      ___________     ___________     TO_NAV          ___________
-                        >;
-                        sensor-bindings = <&inc_dec_kp LC(LS(C)) LC(LS(V)) &inc_dec_kp DEL BSPC>;
-                };
-                nav_layer {
-                        bindings = <
-                                &kp ESC         &kp HOME        &kp UP          &kp END         &kp PG_UP       &kp INS         _____x_____     _____x_____     _____x_____     _____x_____
-                                &kp CAPS        &kp LEFT        &kp DOWN        &kp RIGHT       &kp PG_DN       &kp DEL         &kp RSHFT       &kp RCTRL       &kp RALT        &kp RGUI
-                                S_UNDO          S_CUT           S_COPY          S_REDO          S_PASTE         _____x_____     &kp SPACE       &kp TAB         _____x_____     &kp K_APP
-                                                                ___________     TO_DEFAULT      ___________     ___________     TO_FUNC         ___________
-                            >;
-                        sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp DEL BSPC>;
-                };
-                function_layer {
-                        bindings = <
-                                &kp ESC         _____x_____     ___________     ___________     _____x_____     &kp PSCRN       &kp F7          &kp F8          &kp F9          &kp F12
-                                &kp LGUI        &kp LALT        &kp LCTRL       &kp LSHFT       _____x_____     &kp SLCK        &kp F4          &kp F5          &kp F6          &kp F11
-                                ___________     _____x_____     _____x_____     _____x_____     _____x_____     &kp PAUSE_BREAK &kp F1          &kp F2          &kp F3          &kp F10
-                                                                ___________     TO_DEFAULT      ___________     ___________     TO_FUNC         ___________
-                        >;
-                        sensor-bindings = <&inc_dec_kp C_NEXT C_PREV &inc_dec_kp C_VOL_UP C_VOL_DN>;
-                };
-                adjust_layer {
-                        bindings = <
-                                _____x_____     _____x_____     _____x_____     &out OUT_TOG    BTClear         TO_DEFAULT      TO_QWERTY       TO_GAMING       _____x_____     _____x_____
-                                BT4             BT3             BT2             BT1             BT0             _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
-                                _____x_____     _____x_____     _____x_____     &bootloader     _____x_____     _____x_____     &bootloader     _____x_____     _____x_____     ___________
-                                                                TO_DEFAULT      ___________     ___________     ___________     TO_FUNC         ___________
-                        >;
-                        sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP &inc_dec_kp DEL BSPC>;
-                };
+    keymap {
+        compatible = "zmk,keymap";
+        base_layer {
+            bindings = <
+                &kp Q       &kp W       &kp F       &kp P       &kp B       &kp J       &kp L       &kp U       &kp Y       &kp SQT
+                &kp A       &kp R       &kp S       &kp T       &kp G       &kp M       &kp N       &kp E       &kp I       &kp O   
+                &kp Z       &kp X       &kp C       &kp D       &kp V       &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH 
+                                        &kp C_MUTE  &mo NAV     &kp SPACE   &kp LSHFT   &mo SYM     &kp C_MUTE
+            >;
+            sensor-bindings = <&inc_dec_kp LA(F) LA(B) &inc_dec_kp DEL BSPC>;
         };
+        nav_layer {
+            bindings = <
+            &kp TAB   XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX    XXXXXXXX  &kp HOME  &kp END   &kp BSPC  &kp DEL
+            &sk SHFT  &sk CTRL  &sk ALT   &sk CMD   &sk MEH     XXXXXXXX  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
+            XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX  &sk HYPR    XXXXXXXX  XXXXXXXX  &kp PGDN  &kp PGUP  XXXXXXXX 
+                                _______   _______   _______     _______   _______   _______
+                >;
+            sensor-bindings = <&inc_dec_kp LC(TAB) LC(LS(TAB)) &inc_dec_kp DEL BSPC>;
+        };
+        sym_layer {
+            bindings = <
+            &kp ESC     &kp DLR     &kp PERC    &kp LPRN    &kp RPRN    &kp CIRC    &kp TILD    &kp GRV     &kp PIPE    &kp BSLS  
+            &kp MINS    &kp PLUS    &kp EQL     &kp LCBR    &kp RCBR    &kp HASH    &sk CMD     &sk ALT     &sk CTRL    &sk SHFT  
+            &kp UNDS    &kp ASTR    &kp AT      &kp LBRC    &kp RBRC    XXXXXXXX    &kp AMPR    &kp SCLN    &kp COLN    &kp EXLM  
+                                    ________    &mo NAV     ________    ________    ________    ________
+
+            >;
+            sensor-bindings = <&inc_dec_kp LC(LS(C)) LC(LS(V)) &inc_dec_kp DEL BSPC>;
+        };
+        num_layer {
+            bindings = <
+          &kp N1    &kp N2    &kp N3    &kp N4     &kp N5      &kp N6    &kp N7     &kp N8     &kp N9     &kp N0   
+          &sk SHFT  &sk CTRL  &sk ALT   &sk CMD    &kp F11     &kp F12   &sk CMD    &sk ALT    &sk CTRL   &sk SHFT 
+          &kp F1    &kp F2    &kp F3    &kp F4     &kp F5      &kp F6    &kp F7     &kp F8     &kp F9     &kp F10   
+                        ___________     ___________      ___________     ___________     ___________      ___________
+            >;
+            sensor-bindings = <&inc_dec_kp LC(LS(C)) LC(LS(V)) &inc_dec_kp DEL BSPC>;
+        };
+        adj_layer {
+            bindings = <
+                _____x_____     _____x_____     _____x_____     &out OUT_TOG    BTClear     TO_DEFAULT      TO_QWERTY       TO_GAMING       _____x_____     _____x_____
+                BT4         BT3         BT2         BT1         BT0         _____x_____     _____x_____     _____x_____     _____x_____     _____x_____
+                _____x_____     _____x_____     _____x_____     &bootloader     _____x_____     _____x_____     &bootloader     _____x_____     _____x_____     ___________
+                                TO_DEFAULT      ___________     ___________     ___________     TO_FUNC     ___________
+            >;
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP &inc_dec_kp DEL BSPC>;
+        };
+    };
 };

@@ -10,14 +10,11 @@
 #endif
 
 #ifdef ROLLOW
-#define COLEMAK 0
-#define QWERTY  1
-#define GAMING  2
-#define SYMBOL  3
-#define NUMBER  4
-#define NAVI    5
-#define FUNC    6
-#define ADJUST  7
+#define BASE    0
+#define NAV     2
+#define SYM     1
+#define NUM     3
+#define ADJ     4
 #endif
 
 //Basic Key Aliases
