@@ -57,7 +57,7 @@
         };
         sym_layer {
             bindings = <
-            &kp ESCAPE  &kp DLLR    &kp PRCNT   &kp LPRN    &kp RPRN    &kp CARET   &kp TILDE   &kp GRAVE   &kp PIPE    &kp BSLH
+            &kp ESC     &kp DLLR    &kp PRCNT   &kp LPAR    &kp RPAR    &kp CARET   &kp TILDE   &kp GRAVE   &kp PIPE    &kp BSLH
             &kp MINUS   &kp PLUS    &kp EQUAL   &kp LCBR    &kp RCBR    &kp HASH    &sk LCMD    &sk LALT    &sk LCTRL   &sk LSHFT  
             &kp UNDER   &kp STAR    &kp AT      &kp LBRC    &kp RBRC    XXXXXXXX    &kp AMPS    &kp SEMI    &kp COLON   &kp EXCL  
                                 ___________  ___________  ___________    ___________  ___________  ___________
