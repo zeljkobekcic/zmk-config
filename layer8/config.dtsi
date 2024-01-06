@@ -11,8 +11,8 @@
 
 #ifdef ROLLOW
 #define BASE    0
-#define NAV     2
-#define SYM     1
+#define NAV     1
+#define SYM     2
 #define NUM     3
 #define ADJ     4
 #endif
