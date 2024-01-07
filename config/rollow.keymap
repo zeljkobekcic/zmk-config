@@ -28,7 +28,7 @@
 
 &sk {
         quick-release;
-}
+};
 
 / {
     chosen {
