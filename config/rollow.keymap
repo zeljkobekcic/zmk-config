@@ -26,9 +26,9 @@
     tapping-term-ms = <TAPPING_TERM>;
 };
 
-// &sk {
-//         quick-release;
-// };
+&sk {
+        quick-release;
+};
 
 / {
     chosen {
@@ -59,10 +59,10 @@
         };
         nav_layer {
             bindings = <
-            &kp TAB   XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX    &kp ENTER &kp HOME  &kp END   &kp BSPC  &kp DEL
-            &sk LSHFT &sk LCTRL &sk LALT  &sk LCMD  XXXXXXXX    XXXXXXXX  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
-            XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX    XXXXXXXX  XXXXXXXX  &kp PG_DN &kp PG_UP XXXXXXXX
-                                &trans    &trans    &trans      &mo ADJ   &trans    &trans
+            &kp TAB   XXXXXXXX  SPACE_LEFT  SPACE_RIGHT ALFRED      &kp ENTER &kp HOME  &kp END   &kp BSPC  &kp DEL
+            &sk LSHFT &sk LCTRL &sk LALT    &sk LCMD    XXXXXXXX    XXXXXXXX  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
+            XXXXXXXX  XXXXXXXX  TAB_LEFT    TAB_RIGHT   XXXXXXXX    XXXXXXXX  XXXXXXXX  &kp PG_DN &kp PG_UP XXXXXXXX
+                                &trans      &trans      &trans      &mo ADJ   &trans    &trans
                 >;
         };
         sym_layer {
