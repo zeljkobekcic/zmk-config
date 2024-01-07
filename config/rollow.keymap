@@ -26,9 +26,9 @@
     tapping-term-ms = <TAPPING_TERM>;
 };
 
-&sk {
-        quick-release;
-};
+// &sk {
+//         quick-release;
+// };
 
 / {
     chosen {
@@ -46,8 +46,7 @@
                 &kp Q       &kp W       &kp F       &kp P       &kp B       &kp J       &kp L       &kp U       &kp Y       &kp SQT
                 &kp A       &kp R       &kp S       &kp T       &kp G       &kp M       &kp N       &kp E       &kp I       &kp O   
                 &kp Z       &kp X       &kp C       &kp D       &kp V       &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH 
-                                        _____x_____  &mo NAV     &kp SPACE   &kp LSHFT   &mo SYM     _____x_____
-
+                                        &none       &mo NAV     &kp SPACE   &kp LSHFT   &mo SYM     &none
             >;
         };
         nav_layer {
@@ -55,8 +54,7 @@
             &kp TAB   XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX    &kp ENTER &kp HOME  &kp END   &kp BSPC  &kp DEL
             &sk LSHFT &sk LCTRL &sk LALT  &sk LCMD  XXXXXXXX    XXXXXXXX  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
             XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX  XXXXXXXX    XXXXXXXX  XXXXXXXX  &kp PG_DN &kp PG_UP XXXXXXXX
-                                ___________  ___________  ___________    &mo ADJ    ___________  ___________
-
+                                &trans    &trans    &trans      &mo ADJ   &trans    &trans
                 >;
         };
         sym_layer {
@@ -64,7 +62,7 @@
             &kp ESC     &kp DLLR    &kp PRCNT   &kp LPAR    &kp RPAR    &kp CARET   &kp TILDE   &kp GRAVE   &kp PIPE    &kp BSLH
             &kp MINUS   &kp PLUS    &kp EQUAL   &kp LBRC    &kp RBRC    &kp HASH    &sk LCMD    &sk LALT    &sk LCTRL   &sk LSHFT  
             &kp UNDER   &kp STAR    &kp AT      &kp LBKT    &kp RBKT    XXXXXXXX    &kp AMPS    &kp SEMI    &kp COLON   &kp EXCL  
-                                ___________  ___________  ___________    ___________  ___________  ___________
+                                    &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };
         num_layer {
@@ -72,25 +70,25 @@
           &kp N1    &kp N2    &kp N3    &kp N4     &kp N5      &kp N6    &kp N7     &kp N8     &kp N9     &kp N0   
           &sk LSHFT &sk LCTRL &sk LALT  &sk LCMD   &kp F11     &kp F12   &sk LCMD   &sk LALT   &sk LCTRL  &sk LSHFT  
           &kp F1    &kp F2    &kp F3    &kp F4     &kp F5      &kp F6    &kp F7     &kp F8     &kp F9     &kp F10   
-                        ___________     ___________      ___________     ___________     ___________      ___________
+                              &trans      &trans      &trans      &trans      &trans      &trans
             >;
         };
         adj_layer {
             bindings = <
-                _____x_____     _____x_____     _____x_____     _____x_____     BTClear         _____x_____     _____x_____     _____x_____       _____x_____     _____x_____
-                BT4             BT3             BT2             BT1             BT0             _____x_____     _____x_____     _____x_____       _____x_____     _____x_____
-                _____x_____     _____x_____     _____x_____     &bootloader     _____x_____     _____x_____     &bootloader     _____x_____       _____x_____     ___________
-                                ___________     ___________     ___________     ___________     ___________     ___________      
+                &none     &none     &none     &none           BTClear         &none     &none           &none       &none     &none
+                BT4       BT3       BT2       BT1             BT0             &none     &none           &none       &none     &none
+                &none     &none     &none     &bootloader     &none           &none     &bootloader     &none       &none     &trans
+                                    &trans    &trans          &trans          &trans    &trans          &trans      
             >;
         };
 
-        conditional_layers {
-            compatible = "zmk,conditional-layers";
-
-            tri_layer {
-                if-layers = <SYM NAV>;
-                then-layer = <NUM>;
-            };
-        };
+        // conditional_layers {
+        //     compatible = "zmk,conditional-layers";
+        //
+        //     tri_layer {
+        //         if-layers = <SYM NAV>;
+        //         then-layer = <NUM>;
+        //     };
+        // };
     };
 };
