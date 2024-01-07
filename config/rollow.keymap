@@ -62,7 +62,7 @@
             &kp TAB   XXXXXXXX  SPACE_LEFT  SPACE_RIGHT ALFRED      XXXXXXXX  &kp HOME  &kp END   &kp BSPC  &kp DEL
             &sk LSHFT &sk LCTRL &sk LALT    &sk LCMD    MEH         XXXXXXXX  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
             XXXXXXXX  XXXXXXXX  TAB_LEFT    TAB_RIGHT   HYPER       XXXXXXXX  XXXXXXXX  &kp PG_DN &kp PG_UP XXXXXXXX
-                                &trans      &trans      &kp ENTER   &mo ADJ   &trans    &trans
+                                &trans      &trans      &trans      &kp ENTER &trans    &trans
                 >;
         };
         sym_layer {
@@ -70,7 +70,7 @@
             &kp ESC     &kp DLLR    &kp PRCNT   &kp LPAR    &kp RPAR    &kp CARET   &kp TILDE   &kp GRAVE   &kp PIPE    &kp BSLH
             &kp MINUS   &kp PLUS    &kp EQUAL   &kp LBRC    &kp RBRC    &kp HASH    &sk LCMD    &sk LALT    &sk LCTRL   &sk LSHFT  
             &kp UNDER   &kp STAR    &kp AT      &kp LBKT    &kp RBKT    XXXXXXXX    &kp AMPS    &kp SEMI    &kp COLON   &kp EXCL  
-                                    &trans      &trans      &trans      &trans      &trans      &trans
+                                    &trans      &trans      &mo ADJ     &trans      &trans      &trans
             >;
         };
         num_layer {
