@@ -49,7 +49,6 @@
                                         _____x_____  &mo NAV     &kp SPACE   &kp LSHFT   &mo SYM     _____x_____
 
             >;
-            sensor-bindings = <&inc_dec_kp _____x_____ _____x_____ &inc_dec_kp _____x_____ _____x_____>;
         };
         nav_layer {
             bindings = <
@@ -59,7 +58,6 @@
                                 ___________  ___________  ___________    &mo ADJ    ___________  
 
                 >;
-                sensor-bindings = <&inc_dec_kp _____x_____ _____x_____ &inc_dec_kp _____x_____ _____x_____>;
         };
         sym_layer {
             bindings = <
@@ -68,7 +66,6 @@
             &kp UNDER   &kp STAR    &kp AT      &kp LBKT    &kp RBKT    XXXXXXXX    &kp AMPS    &kp SEMI    &kp COLON   &kp EXCL  
                                 ___________  ___________  ___________    ___________  ___________  ___________
             >;
-            sensor-bindings = <&inc_dec_kp _____x_____ _____x_____ &inc_dec_kp _____x_____ _____x_____>;
         };
         num_layer {
             bindings = <
@@ -77,7 +74,6 @@
           &kp F1    &kp F2    &kp F3    &kp F4     &kp F5      &kp F6    &kp F7     &kp F8     &kp F9     &kp F10   
                         ___________     ___________      ___________     ___________     ___________      ___________
             >;
-            sensor-bindings = <&inc_dec_kp _____x_____ _____x_____ &inc_dec_kp _____x_____ _____x_____>;
         };
         adj_layer {
             bindings = <
@@ -86,16 +82,15 @@
                 _____x_____     _____x_____     _____x_____     &bootloader     _____x_____     _____x_____     &bootloader     _____x_____       _____x_____     ___________
                                 ___________     ___________     ___________     ___________     ___________     ___________      
             >;
-            sensor-bindings = <&inc_dec_kp _____x_____ _____x_____ &inc_dec_kp _____x_____ _____x_____>;
         };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
+        conditional_layers {
+            compatible = "zmk,conditional-layers";
 
-        tri_layer {
-            if-layers = <SYM NAV>;
-            then-layer = <NUM>;
+            tri_layer {
+                if-layers = <SYM NAV>;
+                then-layer = <NUM>;
+            };
         };
-    };
     };
 };
