@@ -23,6 +23,8 @@
 #define ________ &trans
 #define XXXXXXXX &none
 
+#define HYPER       &sk LG(LC(LA(LSHFT)))
+#define MEH         &sk LC(LA(LSHFT))
 #define SPACE_LEFT  &kp LC(LEFT)
 #define SPACE_RIGHT &kp LC(RIGHT)
 #define TAB_LEFT    &kp LG(LS(LBKT))
