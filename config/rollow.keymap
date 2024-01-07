@@ -38,6 +38,14 @@
     behaviors {
     };
 
+     conditional_layers {
+        compatible = "zmk,conditional-layers";
+    
+        tri_layer {
+            if-layers = <SYM NAV>;
+            then-layer = <NUM>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -82,13 +90,5 @@
             >;
         };
 
-        conditional_layers {
-            compatible = "zmk,conditional-layers";
-        
-            tri_layer {
-                if-layers = <SYM NAV>;
-                then-layer = <NUM>;
-            };
-        };
     };
 };
