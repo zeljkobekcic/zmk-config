@@ -60,9 +60,9 @@
         nav_layer {
             bindings = <
             &kp TAB   XXXXXXXX  SPACE_LEFT  SPACE_RIGHT ALFRED      XXXXXXXX  &kp HOME  &kp END   &kp BSPC  &kp DEL
-            &sk LSHFT &sk LCTRL &sk LALT    &sk LCMD    MEH         &kp ENTER &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
+            &sk LSHFT &sk LCTRL &sk LALT    &sk LCMD    MEH         XXXXXXXX  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
             XXXXXXXX  XXXXXXXX  TAB_LEFT    TAB_RIGHT   HYPER       XXXXXXXX  XXXXXXXX  &kp PG_DN &kp PG_UP XXXXXXXX
-                                &trans      &trans      &trans      &mo ADJ   &trans    &trans
+                                &trans      &trans      &kp ENTER   &mo ADJ   &trans    &trans
                 >;
         };
         sym_layer {
