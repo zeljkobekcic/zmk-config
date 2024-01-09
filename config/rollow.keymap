@@ -54,7 +54,7 @@
 / {
     chosen {
         zmk,matrix_transform = &five_column_transform;
-	};
+    };
 
     behaviors {
     };
@@ -75,15 +75,15 @@
                 &kp Q       &kp W       &kp F       &kp P       &kp B       &kp J       &kp L       &kp U       &kp Y       &kp SQT
                 &kp A       &kp R       &kp S       &kp T       &kp G       &kp M       &kp N       &kp E       &kp I       &kp O   
                 &kp Z       &kp X       &kp C       &kp D       &kp V       &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH 
-                                        &none       &mo NAV     &kp LSHFT   &kp ENTER   &mo SYM     &none
+                                        &none       &mo NAV     &kp LSHFT   &kp SPACE   &mo SYM     &none
             >;
         };
 
         nav_layer {
             bindings = <
-            &kp TAB   XXXXXXXX  SPACE_LEFT  SPACE_RIGHT ALFRED      XXXXXXXX  &kp HOME  &kp END   &kp BSPC  &kp DEL
-            &sk LSHFT &sk LCTRL &sk LALT    &sk LCMD    MEH         XXXXXXXX  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
-            XXXXXXXX  XXXXXXXX  TAB_LEFT    TAB_RIGHT   HYPER       XXXXXXXX  XXXXXXXX  &kp PG_DN &kp PG_UP XXXXXXXX
+            &kp TAB   &none     SPACE_LEFT  SPACE_RIGHT ALFRED      &none     &kp HOME  &kp END   &kp BSPC  &kp DEL
+            &sk LSHFT &sk LCTRL &sk LALT    &sk LCMD    MEH         &none     &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT 
+            &none     &none     TAB_LEFT    TAB_RIGHT   HYPER       &none     &none     &kp PG_DN &kp PG_UP &none   
                                 &trans      &trans      &trans      &kp ENTER &trans    &trans
                 >;
         };
@@ -92,7 +92,7 @@
             bindings = <
             &kp ESC     &kp DLLR    &kp PRCNT   &kp LPAR    &kp RPAR    &kp CARET   &kp TILDE   &kp GRAVE   &kp PIPE    &kp BSLH
             &kp MINUS   &kp PLUS    &kp EQUAL   &kp LBRC    &kp RBRC    &kp HASH    &sk LCMD    &sk LALT    &sk LCTRL   &sk LSHFT  
-            &kp UNDER   &kp STAR    &kp AT      &kp LBKT    &kp RBKT    XXXXXXXX    &kp AMPS    &kp SEMI    &kp COLON   &kp EXCL  
+            &kp UNDER   &kp STAR    &kp AT      &kp LBKT    &kp RBKT    &none       &kp AMPS    &kp SEMI    &kp COLON   &kp EXCL  
                                     &trans      &trans      &mo ADJ     &trans      &trans      &trans
             >;
         };
